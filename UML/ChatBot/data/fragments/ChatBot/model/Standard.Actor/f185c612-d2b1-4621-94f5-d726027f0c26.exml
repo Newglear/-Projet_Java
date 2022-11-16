@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="User : Other Users [1..50]" version="4">
+  <OBJECT>
+    <ID name="User : Other Users [1..50]" mc="Standard.Actor" uid="f185c612-d2b1-4621-94f5-d726027f0c26"/>
+    <PID name="chatbot" mc="Standard.Package" uid="37ec0340-1f17-4add-9916-a2d53b3bc7b8"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[User : Other Users [1..50]]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ChatBot" version="4">
+  <OBJECT>
+    <ID name="ChatBot" mc="Standard.Project" uid="73622494-7a17-4bf0-b5a4-3dbc375e7a29"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[ChatBot]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="Use_case" mc="Standard.Package" uid="37ec0340-1f17-4add-9916-a2d53b3bc7b8"/>
+        <COMPID name="Sequence" mc="Standard.Package" uid="2ce956e4-9914-48f0-abc9-1b22f8b3bbc8"/>
+        <COMPID name="Classes" mc="Standard.Package" uid="c7061c85-bf25-4d82-8501-07af7a04f44d"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="ChatBot" mc="Infrastructure.DiagramSet" uid="4d5e028a-7c47-40d2-bfcb-a7c0d4056e30"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

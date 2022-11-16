@@ -1,0 +1,11 @@
+#Thu Nov 10 13:57:14 CET 2022
+org.modelio.app.diagram.editor.OpenedDiagrams4='Network Interaction' {33134024-23f1-47ff-b715-eb356a583507} Standard.SequenceDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams3='Conversation - Receive' {aa57b0ea-9059-4fc5-af43-c6d006c27f1c} Standard.SequenceDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams2='Conversation' {615c52c4-44fa-4ac5-8030-496e81910a2e} Standard.SequenceDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams1='Diagramme de classe Classes' {235d3871-6b79-4d6a-8485-7dac12ba4166} Standard.ClassDiagram
+org.modelio.app.module.propertytab.JavaDesigner\ v5.0.00\ GModule\ @file\:///C\:/Users/rober/.modelio/5.1/modules/JavaDesigner_5.0.00/JavaDesigner_5.0.00.jmdac\ runtime\ module_.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.app.diagram.editor.OpenedDiagrams0='Window Manager' {5ddfa9b0-54f0-45de-83df-f488419c7287} Standard.SequenceDiagram
+org.modelio.app.module.propertytab.JavaDesigner\ v5.0.00\ GModule\ @file\:///C\:/Users/rober/.modelio/5.1/modules/JavaDesigner_5.0.00/JavaDesigner_5.0.00.jmdac\ runtime\ module_.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.JavaDesigner\ v5.0.00\ GModule\ @file\:///C\:/Users/rober/.modelio/5.1/modules/JavaDesigner_5.0.00/JavaDesigner_5.0.00.jmdac\ runtime\ module_.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.JavaDesigner\ v5.0.00\ GModule\ @file\:///C\:/Users/rober/.modelio/5.1/modules/JavaDesigner_5.0.00/JavaDesigner_5.0.00.jmdac\ runtime\ module_.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.app.diagram.editor.OpenedDiagrams5='Diagramme de s\u00E9quence System Connection ' {9d1e6bd1-2996-477a-89d4-ce9a937d7859} Standard.SequenceDiagram

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sequence" version="4">
+  <OBJECT>
+    <ID name="Sequence" mc="Standard.Package" uid="2ce956e4-9914-48f0-abc9-1b22f8b3bbc8"/>
+    <PID name="ChatBot" mc="Standard.Project" uid="73622494-7a17-4bf0-b5a4-3dbc375e7a29"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Sequence]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Connection" mc="Standard.Interaction" uid="85e8fb38-99a0-4527-98d1-78c756e8d73b"/>
+        <COMPID name="Disconnection" mc="Standard.Interaction" uid="5e28fb6d-2181-4773-9702-d3141e668053"/>
+        <COMPID name="Send " mc="Standard.Interaction" uid="6da29eec-11c2-411e-af41-5e06c907f099"/>
+        <COMPID name="Interactions" mc="Standard.Interaction" uid="e5c5d630-6dda-470c-9f61-284c33a17960"/>
+        <COMPID name="Conversation - Send" mc="Standard.Interaction" uid="9049772f-2866-40c2-8026-86c2ba07659d"/>
+        <COMPID name="Conversation - Receive" mc="Standard.Interaction" uid="4661fe90-4f81-4f74-a53b-edf83675b55e"/>
+        <COMPID name="Network interactions - Send" mc="Standard.Interaction" uid="88c2f77d-8f9f-4dbb-956d-31d65c781738"/>
+        <COMPID name="Network interactions - Receive" mc="Standard.Interaction" uid="84d49a7b-6263-46f3-bcc2-d81ef9c90703"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
