@@ -12,8 +12,8 @@ public class NetworkSender {
         dgramSocket.setBroadcast(true);
 
         String message = new String("Sending some shit");
-        //byte[] addr= {10,32,46, (byte) 149};
-        byte[] addr = {(byte) 255, (byte) 255, (byte) 255, (byte) 255};
+        byte[] addr= {10,1,(byte)255, (byte) 255};
+        //byte[] addr = {(byte) 255, (byte) 255, (byte) 255, (byte) 255};
         DatagramPacket outPacket = new DatagramPacket(message.getBytes(), message.length(),InetAddress.getByAddress(addr), 1234);
         try {
             dgramSocket.send(outPacket);
