@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<<< HEAD:.idea/workspace.xml
     <list default="true" id="69361075-f899-47be-a6ed-16b7484f3a13" name="Default Changelist" comment="mefno" />
+========
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GwenCador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GwenCador.class" beforeDir="false" />
+    </list>
+>>>>>>>> bb5c8b8 (Network commit 1 test broadcast):ChatBot/.idea/workspace.xml
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,18 +23,72 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
+<<<<<<<< HEAD:.idea/workspace.xml
   <component name="ProjectId" id="2Iwg1XQmZMa1EknQe8rHYAYHem0" />
+========
+  <component name="ProjectId" id="2HciqVrQmFMV41wJT8t866KHNdg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>>> bb5c8b8 (Network commit 1 test broadcast):ChatBot/.idea/workspace.xml
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<<< HEAD:.idea/workspace.xml
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ChatBotFX" />
+========
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/newgz/Insa/Projet_Java/ChatBot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.NetworkSender">
+    <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GwenCador" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetworkReceiver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NetworkReceiver" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetworkSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NetworkSender" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NetworkSender" />
+        <item itemvalue="Application.NetworkReceiver" />
+        <item itemvalue="Application.GwenCador" />
+      </list>
+    </recent_temporary>
+>>>>>>>> bb5c8b8 (Network commit 1 test broadcast):ChatBot/.idea/workspace.xml
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -33,7 +97,13 @@
       <created>1671097844956</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<<< HEAD:.idea/workspace.xml
       <updated>1671097844956</updated>
+========
+      <updated>1668590964575</updated>
+      <workItem from="1668591156051" duration="332000" />
+      <workItem from="1668673926267" duration="6510000" />
+>>>>>>>> bb5c8b8 (Network commit 1 test broadcast):ChatBot/.idea/workspace.xml
     </task>
     <task id="LOCAL-00001" summary="mefno">
       <created>1671097910558</created>
@@ -44,6 +114,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
