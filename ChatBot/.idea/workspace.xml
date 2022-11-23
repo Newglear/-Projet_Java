@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
-    </list>
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +89,7 @@
       <updated>1668590964575</updated>
       <workItem from="1668591156051" duration="332000" />
       <workItem from="1668673926267" duration="7293000" />
+      <workItem from="1668777277063" duration="17000" />
     </task>
     <servers />
   </component>
