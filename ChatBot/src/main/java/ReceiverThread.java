@@ -6,10 +6,12 @@ public class ReceiverThread extends Thread {
     ServerSocket receiverServSocket;
 
     public ReceiverThread(ServerSocket socket) {
+        super("receive");
         this.receiverServSocket = socket;
     }
 
     public void run() {
+        System.out.println("Receiver running, port : "+this.receiverServSocket.getLocalPort());
         try {
         Socket receiverSocket;
         BufferedReader inBis;
@@ -17,9 +19,10 @@ public class ReceiverThread extends Thread {
 
 
             receiverSocket = receiverServSocket.accept();
+            //System.out.println("Connection Receiver Sender Accepted");
+            inBis = new BufferedReader(new InputStreamReader(receiverSocket.getInputStream()));
 
             while(true){
-                inBis = new BufferedReader(new InputStreamReader(receiverSocket.getInputStream()));;
                 message = inBis.readLine();
                 System.out.println(message);
             }
