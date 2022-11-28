@@ -36,11 +36,34 @@ public class NetworkReceiver extends Thread {
                 System.out.println("Attente de réception");
                 recvSock.receive(inPacket);
                 String var = new String(inPacket.getData(), 0, inPacket.getLength());
-                User usr = gson.fromJson(var, User.class);
+                NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
+                switch (msg.getMode()){
+                    case UserInfos:
+                        Receive_Infos(msg.getObject());
+                        break;
+                    case Nickname:
+                        Receive_Nickname(msg.getObject());
+                        break;
+                    case Disconnect:
+                        Receive_Disconnect(msg.getObject());
+                        break;
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+
+    public void Receive_Infos(String obj){
+        User usr = gson.fromJson(obj, User.class);
+        System.out.println(usr);
+    }
+    public void Receive_Nickname(String obj){
+        System.out.println("Changement de pseudo entrant " + obj);
+    }
+    public void Receive_Disconnect(String obj){
+        System.out.println(obj);
     }
 
 }
