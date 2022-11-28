@@ -7,7 +7,6 @@ public class ConnectionManager extends Thread {
     public static int minNumPort = 1234;
     public static int maxNumPort = 2235;
     public ServerSocket serverSocketManager;
-    public ArrayList<ReceiverThread> receiverThreadList = new ArrayList<>();
 
     public ConnectionManager() {
         super("ConnectionManager");
@@ -18,7 +17,7 @@ public class ConnectionManager extends Thread {
         for(int i=minNumPort; i<maxNumPort; i++) {
             try {
                 serverSocket = new ServerSocket(i);
-                System.out.println(i);
+                //System.out.println(i);
                 break;
             } catch (IOException e) {}
         }
@@ -31,8 +30,8 @@ public class ConnectionManager extends Thread {
 
     public void run() {
         try {
-            this.serverSocketManager = findAvailableSocket();
-            System.out.println(this.serverSocketManager.getLocalPort());
+            this.serverSocketManager = new ServerSocket(1234);
+            //System.out.println("public port : "+this.serverSocketManager.getLocalPort());
 
             Socket socketManager;
             ServerSocket receiverSocket;
@@ -41,13 +40,14 @@ public class ConnectionManager extends Thread {
             while(true){
                 socketManager = serverSocketManager.accept();
                 receiverSocket = findAvailableSocket();
-                System.out.println(receiverSocket.getLocalPort());
+                //System.out.println("port found : "+receiverSocket.getLocalPort());
 
-                this.receiverThreadList.add(new ReceiverThread(receiverSocket));
-                this.receiverThreadList.get(receiverThreadList.size()-1).run();
+                ThreadManager.createReceiverThread(receiverSocket);
+                //System.out.println("receiver OK");
 
                 outBis = new PrintWriter(socketManager.getOutputStream(), true);
                 outBis.println(receiverSocket.getLocalPort());
+                //System.out.println("CODE CONTINUE");
             }
 
         } catch (Exception e) {

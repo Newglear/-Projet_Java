@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Test commit sur intelliJ">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SenderThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ThreadManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GwenCador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GwenCador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ReceiverThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ReceiverThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
