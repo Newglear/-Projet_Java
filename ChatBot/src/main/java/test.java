@@ -14,8 +14,7 @@ public class test {
         ConnectionManager c = new ConnectionManager();
         c.start();
 
-        SenderThread s = new SenderThread(a, 1234, "OKOKmdmdmdmdm");
-        s.start();
+        ThreadManager.createSenderThread(a, 1234, "");
     }
 
 }
