@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender" />
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="merge TCP_conv">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SenderThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="TCP_Conversation" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -64,6 +70,9 @@
       <list>
         <item itemvalue="Application.test" />
         <item itemvalue="Application.GwenCador" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.GwenCador" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +99,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669649925835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="merge TCP_conv">
+      <created>1670859401609</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670859401609</updated>
+    </task>
+    <task id="LOCAL-00004" summary="merge TCP_conv">
+      <created>1670859410342</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670859410342</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />
     <MESSAGE value="Connection Manager working with several Sender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connection Manager working with several Sender" />
+    <MESSAGE value="merge TCP_conv" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge TCP_conv" />
   </component>
 </project>
