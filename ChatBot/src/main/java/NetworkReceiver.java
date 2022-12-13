@@ -6,6 +6,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.sql.SQLException;
 import java.util.Arrays;
 
 public class NetworkReceiver extends Thread {
@@ -58,12 +59,30 @@ public class NetworkReceiver extends Thread {
     public void Receive_Infos(String obj){
         User usr = gson.fromJson(obj, User.class);
         System.out.println(usr);
+        try{
+            DatabaseManager.Insert(usr);
+        } catch (SQLException s){
+            System.out.println(s);
+        }
     }
     public void Receive_Nickname(String obj){
-        System.out.println("Changement de pseudo entrant " + obj);
+        User usr = gson.fromJson(obj, User.class);
+        System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
+        try {
+            DatabaseManager.Update(usr);
+        } catch ( SQLException s){
+            System.out.println(s);
+        }
     }
     public void Receive_Disconnect(String obj){
+        User usr = gson.fromJson(obj, User.class);
         System.out.println(obj);
+
+        try{
+            DatabaseManager.Remove(usr);
+        }catch (SQLException s){
+            System.out.println(s);
+        }
     }
 
 }
