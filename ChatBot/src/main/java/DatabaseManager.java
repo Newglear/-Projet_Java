@@ -57,7 +57,7 @@ public class DatabaseManager {
         p.setInt(3,user.getPort());
         p.execute();
     }
-    public  void Insert(Message msg) throws SQLException {
+    public static void Insert(Message msg) throws SQLException {
         String query = "INSERT INTO History(Sender, Receiver, Content,Date) values (?,?,?,?)";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1, msg.getSender());
