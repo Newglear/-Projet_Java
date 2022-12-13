@@ -5,11 +5,13 @@ import java.net.UnknownHostException;
 public class MainSender {
 
     public static void main(String[] args) throws SocketException, UnknownHostException {
-
-        User usr = new User("Cador",1234, InetAddress.getByName("localhost").getAddress());
-        NetworkSender S1 = new NetworkSender(usr);
-        NetworkSender S2 = new NetworkSender("GROS CADOR");
-        NetworkSender S3 = new NetworkSender();
+        DatabaseManager db = new DatabaseManager();
+        User usr = new User("Cador",1234, "localhost");
+        NetworkReceiver net = new NetworkReceiver("R1");
+        NetworkSender S1 = new NetworkSender(usr, Types.UDPMode.UserInfos);
+        usr= new User("Wesh",1234,"localhost");
+        NetworkSender S2 = new NetworkSender(usr, Types.UDPMode.Nickname);
+        //NetworkSender S3 = new NetworkSender(usr, Types.UDPMode.Disconnect);
 
     }
 }

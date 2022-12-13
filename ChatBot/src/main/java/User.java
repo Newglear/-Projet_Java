@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class User {
 
     private int port;
-    private byte[] addr;
+    private String addr;
     private String pseudo;
     private String userInfos;
 
@@ -15,7 +15,7 @@ public class User {
         this.port = port;
     }
 
-    public void setAddr(byte[] addr) {
+    public void setAddr(String addr) {
         this.addr = addr;
     }
 
@@ -37,15 +37,15 @@ public class User {
 
     int userID;
 
-    public byte[] getAddr() {
+    public String getAddr() {
         return addr;
     }
 
     public String UserInfos(){
-        return pseudo+"-"+port+"-"+Arrays.toString(addr);
+        return pseudo+"-"+port+"-"+addr;
     }
 
-    User(String pseudo, int port, byte[] addr){
+    User(String pseudo, int port, String addr){
         this.pseudo = pseudo;
         this.port = port;
         this.addr = addr;
@@ -53,6 +53,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "Nickname: " + this.pseudo + "\nPort: "+ this.port + "\nAdresse: "+ Arrays.toString(this.addr);
+        return "Nickname: " + this.pseudo + "\nPort: "+ this.port + "\nAdresse: "+ this.addr;
     }
 }

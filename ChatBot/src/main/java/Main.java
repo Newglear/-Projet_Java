@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws UnknownHostException, SocketException, SQLException {
         DatabaseManager db = new DatabaseManager();
-        db.LoadUsers();
+        db.Update(new User("pls", 1234,"193.465"));
         db.Disconnect();
     }
 }
