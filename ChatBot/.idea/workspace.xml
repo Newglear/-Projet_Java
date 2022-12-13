@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender" />
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ThreadManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,10 +43,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="TCP_Conversation" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -39,15 +62,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Prog_Fonc/PF_Project" />
-  </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MainSender">
     <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GwenCador" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainSender" />
       <module name="ChatBot" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -62,6 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainSender" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.GwenCador" />
       </list>
@@ -75,6 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668590964575</updated>
+      <workItem from="1670942081903" duration="1889000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit sur intelliJ">
       <created>1668591202573</created>
@@ -93,6 +141,9 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -103,11 +154,21 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />
     <MESSAGE value="Connection Manager working with several Sender" />
     <option name="LAST_COMMIT_MESSAGE" value="Connection Manager working with several Sender" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MainSender.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
