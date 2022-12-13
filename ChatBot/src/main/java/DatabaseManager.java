@@ -63,7 +63,6 @@ public class DatabaseManager {
         p.setString(1, msg.getSender());
         p.setString(2, msg.getReceiver());
         p.setString(3,msg.getMsg());
-        System.out.println(msg.getMsg());
         p.setDate(4, new Date(System.currentTimeMillis()));
         p.execute();
     }

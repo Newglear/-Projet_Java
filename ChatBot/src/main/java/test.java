@@ -5,16 +5,15 @@ import java.util.ArrayList;
 public class test {
 
     public static void main(String[] args) throws UnknownHostException, InterruptedException {
+        DatabaseManager db = new DatabaseManager();
+        String addr ="10.1.5.225";
 
-        byte[] addr = {10,1,5,77};
-        InetAddress a = InetAddress.getByAddress(addr);
 
-        System.out.println(a.getHostAddress());
+        //System.out.println(a.getHostAddress());
 
         ConnectionManager c = new ConnectionManager();
         c.start();
-
-        ThreadManager.createSenderThread(a, 1234, "");
+        //ThreadManager.createSenderThread(InetAddress.getByName(addr),1234,"petit suicide entre amis");
     }
 
 }
