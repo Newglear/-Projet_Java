@@ -1,5 +1,7 @@
 import java.io.*;
 import java.net.*;
+import java.sql.Date;
+import java.sql.SQLException;
 
 public class ReceiverThread extends Thread {
 
@@ -25,6 +27,11 @@ public class ReceiverThread extends Thread {
             while(true){
                 message = inBis.readLine();
                 System.out.println(message);
+                try{
+                    DatabaseManager.Insert(new Message("Newg", "Chador", message, new Date(System.currentTimeMillis())));
+                }catch (SQLException s){
+                    System.out.println(s);
+                }
             }
 
         } catch (IOException e) {

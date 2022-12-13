@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.sql.SQLException;
 
 
 public class SenderThread extends Thread{
@@ -40,15 +41,21 @@ public class SenderThread extends Thread{
             convSocket = new Socket(this.adressReceiver, this.receiverPort);
 
 
-            while(true){
-                sleep(5000);
+            //while(true){
+            //    sleep(5000);
                 outBis = new PrintWriter(convSocket.getOutputStream(), true);
                 outBis.println(this.message);
-            }
+                try {
+                    DatabaseManager.Insert(new Message("Chad","Newg","Petit message de test")); // TODO: Modifier l'envoi des message pour gérer l'emetteur et el recepteur
+                } catch (SQLException s){
+                    System.out.println(s);
+                }
+            //}
 
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException /* | InterruptedException*/ e) {
             e.printStackTrace();
         }
 
     }
+
 }
