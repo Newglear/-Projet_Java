@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender">
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Test commit sur intelliJ">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainReceive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +56,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
-    ]
-  }
-}]]></component>
-  <component name="RunManager" selected="Application.MainSender">
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.test">
     <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GwenCador" />
       <module name="ChatBot" />
@@ -92,9 +90,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.MainSender" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.GwenCador" />
       </list>
     </recent_temporary>
@@ -139,6 +137,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />

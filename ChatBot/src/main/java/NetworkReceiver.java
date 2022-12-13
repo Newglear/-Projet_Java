@@ -58,7 +58,7 @@ public class NetworkReceiver extends Thread {
 
     public void Receive_Infos(String obj){
         User usr = gson.fromJson(obj, User.class);
-        System.out.println(usr);
+        System.out.println("Nouvel Utilisateur "+usr);
         try{
             DatabaseManager.Insert(usr);
         } catch (SQLException s){
@@ -76,7 +76,7 @@ public class NetworkReceiver extends Thread {
     }
     public void Receive_Disconnect(String obj){
         User usr = gson.fromJson(obj, User.class);
-        System.out.println(obj);
+        System.out.println("Déconnexion de " + obj);
 
         try{
             DatabaseManager.Remove(usr);
