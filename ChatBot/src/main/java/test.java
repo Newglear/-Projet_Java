@@ -2,19 +2,27 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
+import static java.lang.Thread.sleep;
+
 public class test {
 
     public static void main(String[] args) throws UnknownHostException, InterruptedException {
 
-        byte[] addr = {10,1,5,77};
-        InetAddress a = InetAddress.getByAddress(addr);
+        String addr = "localhost";
+        InetAddress a = InetAddress.getByName(addr);
 
         System.out.println(a.getHostAddress());
 
         ConnectionManager c = new ConnectionManager();
         c.start();
-
-        ThreadManager.createSenderThread(a, 1234, "");
+        SendTestThread Th = new SendTestThread("localhost",1234,"????");
+        Th.start();
+        while(true) {
+            Th.Send("wesh");
+            sleep(5000);
+        }
+        //Th.interrupt();
+            //ThreadManager.createSenderThread(a, 1234, "");
     }
 
 }
