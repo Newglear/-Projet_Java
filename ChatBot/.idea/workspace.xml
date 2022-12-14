@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="System Components et DB prete">
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SendTestThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SystemComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ThreadManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +28,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -47,25 +50,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Prog_Fonc/PF_Project" />
   </component>
   <component name="RunManager" selected="Application.test">
     <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GwenCador" />
-      <module name="ChatBot" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ChatBot" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainSender" />
       <module name="ChatBot" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,8 +73,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.MainSender" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GwenCador" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.GwenCador" />
       </list>
     </recent_temporary>
@@ -95,7 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668590964575</updated>
-      <workItem from="1670942081903" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit sur intelliJ">
       <created>1668591202573</created>
@@ -114,9 +105,6 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -132,18 +120,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />
     <MESSAGE value="Connection Manager working with several Sender" />
-    <MESSAGE value="System Components et DB prete" />
-    <option name="LAST_COMMIT_MESSAGE" value="System Components et DB prete" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MainSender.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Connection Manager working with several Sender" />
   </component>
 </project>
