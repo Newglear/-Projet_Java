@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gui.LoginController">
+   <children>
+      <AnchorPane prefHeight="181.0" prefWidth="468.0" style="-fx-background-color: #434343;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="198.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/loginChad.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="187.0" layoutY="29.0" text="CHADOR" textFill="WHITE">
+               <font>
+                  <Font name="Comfortaa Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="187.0" layoutY="82.0" prefHeight="64.0" prefWidth="249.0" text="The new chat for aerial companies" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Comfortaa Light" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="311.0" prefWidth="468.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="14.0" layoutY="261.0" text="IP :">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="57.0" prefHeight="26.0" prefWidth="240.0" text="Enter your username :" textFill="#434343">
+               <font>
+                  <Font name="Comfortaa Regular" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="bt_login" layoutX="187.0" layoutY="190.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #434343;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Comfortaa Regular" size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="username_in" layoutX="159.0" layoutY="90.0" prefHeight="38.0" prefWidth="194.0" promptText="ex : Quorums">
+               <font>
+                  <Font name="Comfortaa Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Pane layoutX="115.0" layoutY="90.0" prefHeight="38.0" prefWidth="45.0" style="-fx-background-color: #dfdfdf; -fx-background-radius: 5 0 0 5;">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="9.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconPerson.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="41.0" layoutY="261.0" text="0.0.0.0" textFill="#434343">
+               <font>
+                  <Font name="Comfortaa Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning_lb" layoutX="110.0" layoutY="138.0" style="visibility: false;" text="Warning : this username is already used" textFill="RED">
+               <font>
+                  <Font name="Comfortaa Light" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</VBox>
