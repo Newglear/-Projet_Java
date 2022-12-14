@@ -7,7 +7,14 @@
     <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Maj DB : Check unicity et Network">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ThreadManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Types$UDPMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Types$UDPMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671013662875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Maj DB : Check unicity et Network">
+      <created>1671014326417</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671014326417</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
