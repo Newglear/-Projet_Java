@@ -20,6 +20,7 @@ public class NetworkSender{
                         Send_User_Infos(infos);
                         break;
                     case NicknameError:
+                        Send_Nickname_Error(infos);
                         break;
                     case Disconnect:
                         Disconnect(infos);

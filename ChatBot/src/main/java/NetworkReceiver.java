@@ -45,6 +45,9 @@ public class NetworkReceiver extends Thread {
                     case Nickname:
                         Receive_Nickname(msg.getObject());
                         break;
+                    case NicknameError:
+                        Receive_Nickname_Error(msg.getObject());
+                        break;
                     case Disconnect:
                         Receive_Disconnect(msg.getObject());
                         break;
@@ -82,6 +85,11 @@ public class NetworkReceiver extends Thread {
         } catch ( SQLException s){
             System.out.println(s);
         }
+    }
+        public void Receive_Nickname_Error(String obj){
+        User usr = gson.fromJson(obj, User.class);
+        System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
+        System.out.println("ERROR");
     }
     public void Receive_Disconnect(String obj){
         User usr = gson.fromJson(obj, User.class);
