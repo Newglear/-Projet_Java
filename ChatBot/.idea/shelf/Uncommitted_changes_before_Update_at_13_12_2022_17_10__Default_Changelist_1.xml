@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1" date="1670947859998" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 13/12/2022 17:10 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/NetworkSender$1.class" />
+    <option name="AFTER_PATH" value="target/classes/NetworkSender$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1/NetworkSender$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/NetworkSender.class" />
+    <option name="AFTER_PATH" value="target/classes/NetworkSender.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1/NetworkSender.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChaDBsqlite" />
+    <option name="AFTER_PATH" value="ChaDBsqlite" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1/ChaDBsqlite" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/NetworkReceiver.class" />
+    <option name="AFTER_PATH" value="target/classes/NetworkReceiver.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2022_17_10_[Default_Changelist]1/NetworkReceiver.class" />
+  </binary>
+</changelist>

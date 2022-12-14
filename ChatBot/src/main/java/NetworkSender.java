@@ -7,6 +7,7 @@ public class NetworkSender{
     private final DatagramSocket senderSock;
     Gson gson= new Gson();
     private final byte[] broadcastAddr= {10,32,(byte)47, (byte) 255};
+	private String broad = "10.1.255.255" ; 
     NetworkSender(User infos,Types.UDPMode mode) throws SocketException {
             senderSock = new DatagramSocket();
             senderSock.setBroadcast(true);
@@ -32,7 +33,7 @@ public class NetworkSender{
         System.out.println("===== Phase d'envoi =====");
         String user = gson.toJson(usr);
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.UserInfos, user));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByAddress(broadcastAddr), 1234);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), 1234);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");
@@ -43,7 +44,7 @@ public class NetworkSender{
 
         System.out.println("===== Phase d'envoi =====");
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Nickname, gson.toJson(usr)));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByAddress(broadcastAddr), 1234);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), 1234);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");
@@ -53,7 +54,7 @@ public class NetworkSender{
     public void Disconnect(User usr) throws IOException {
         System.out.println("===== Phase d'envoi =====");
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Disconnect, gson.toJson(usr)));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByAddress(broadcastAddr), 1234);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), 1234);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");

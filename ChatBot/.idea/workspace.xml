@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Sender + DB test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SystemComponents.java" afterDir="false" />
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Test commit sur intelliJ">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainReceive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ThreadManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetworkSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +56,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
-    ]
-  }
-}]]></component>
-  <component name="RunManager" selected="Application.MainSender">
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.test">
     <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GwenCador" />
       <module name="ChatBot" />
@@ -92,9 +90,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.MainSender" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.GwenCador" />
       </list>
     </recent_temporary>
@@ -107,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668590964575</updated>
-      <workItem from="1670942081903" duration="5990000" />
+      <workItem from="1670942081903" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit sur intelliJ">
       <created>1668591202573</created>
@@ -123,14 +121,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669649925835</updated>
     </task>
-    <task id="LOCAL-00003" summary="Sender + DB test">
-      <created>1670947518482</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1670947518482</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,12 +137,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />
     <MESSAGE value="Connection Manager working with several Sender" />
-    <MESSAGE value="Sender + DB test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sender + DB test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connection Manager working with several Sender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
