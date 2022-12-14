@@ -35,6 +35,13 @@ public class DatabaseManager {
         return l;
     }
 
+    public static boolean checkUnicity(String nickname) throws SQLException {
+        String query = "Select * from Users where Nickname=?";
+        PreparedStatement p = con.prepareStatement(query);
+        p.setString(1,nickname);
+        ResultSet rs = p.executeQuery();
+        return !(rs.getString("Nickname") == null);
+    }
 
     public static void Remove(User user) throws SQLException {
         String query = "DELETE FROM Users where Nickname = ?";

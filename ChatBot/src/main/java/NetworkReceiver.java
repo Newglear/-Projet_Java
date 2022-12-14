@@ -69,7 +69,16 @@ public class NetworkReceiver extends Thread {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
         try {
-            DatabaseManager.Update(usr);
+            if(DatabaseManager.checkUnicity(usr.getPseudo()) && SystemComponents.currentNickname != usr.getPseudo()){
+                DatabaseManager.Update(usr);
+            }
+            else{
+                try {
+                    ThreadManager.createNetworkSender(usr, Types.UDPMode.NicknameError);
+                } catch (SocketException e){
+                    System.out.println(e);
+                }
+            }
         } catch ( SQLException s){
             System.out.println(s);
         }

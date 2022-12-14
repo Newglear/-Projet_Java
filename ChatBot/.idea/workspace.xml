@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="System Components et DB prete">
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Rebase TCP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SystemComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ThreadManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ThreadManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,9 +89,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.GwenCador" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.MainSender" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GwenCador" />
       </list>
     </recent_temporary>
   </component>
@@ -134,16 +143,5 @@
     <MESSAGE value="Connection Manager working with several Sender" />
     <MESSAGE value="System Components et DB prete" />
     <option name="LAST_COMMIT_MESSAGE" value="System Components et DB prete" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MainSender.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

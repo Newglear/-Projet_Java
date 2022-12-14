@@ -19,6 +19,8 @@ public class NetworkSender{
                     case UserInfos:
                         Send_User_Infos(infos);
                         break;
+                    case NicknameError:
+                        break;
                     case Disconnect:
                         Disconnect(infos);
                         break;
@@ -51,6 +53,18 @@ public class NetworkSender{
         System.out.println("===== Fin d'envoi =====");
         senderSock.close();
     }
+    public void Send_Nickname_Error(User usr) throws IOException {
+
+        System.out.println("===== Phase d'envoi =====");
+        String msg =gson.toJson( new NetworkMessage(Types.UDPMode.NicknameError, gson.toJson(usr)));
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), 1234);
+        System.out.println("Envoi des infos");
+        senderSock.send(outPacket);
+        System.out.println("Infos Envoyées");
+        System.out.println("===== Fin d'envoi =====");
+        senderSock.close();
+    }
+
     public void Disconnect(User usr) throws IOException {
         System.out.println("===== Phase d'envoi =====");
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Disconnect, gson.toJson(usr)));

@@ -15,6 +15,10 @@ public class ThreadManager {
         senderThreadList.add(new SenderThread(IPaddress,publicPort,message));
         senderThreadList.get(senderThreadList.size()-1).start();
     }
+    public static void createNetworkSender(User usr,Types.UDPMode mode) throws SocketException {
+        NetworkSender T = new NetworkSender(usr,mode);
+    }
+
 
     public static void StartConnection() throws Exception {
         if(Connect == null ){
