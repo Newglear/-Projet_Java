@@ -1,0 +1,26 @@
+Index: src/main/java/DatabaseManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.sound.midi.Receiver;\nimport java.sql.*;\nimport java.util.ArrayList;\n\n\npublic class DatabaseManager {\n    private static Connection con;\n    public DatabaseManager(){\n\n        try {\n            con = DriverManager.getConnection(\"jdbc:sqlite:ChaDBsqlite\");\n        }catch (SQLException s) {\n            System.out.println(s);\n        }\n       /* String query = \"SELECT * FROM main.History where ?\";\n        PreparedStatement pstmt = con.prepareStatement(query);\n        pstmt.setString(1,\"History\");\n        ResultSet rs = pstmt.executeQuery();\n\n        System.out.println(rs.getString(\"user\"));\n*/\n        System.out.println(\"Database Initialised\");\n\n\n    }\n\n    public static ArrayList<String> LoadUsers() throws SQLException {\n        ArrayList<String> l = new ArrayList<>();\n        String query = \"Select * from Users\";\n        PreparedStatement p = con.prepareStatement(query);\n        ResultSet rs = p.executeQuery();\n        while (rs.next()){\n            l.add(rs.getString(\"Nickname\"));\n        }\n        return l;\n    }\n\n\n    public static void Remove(User user) throws SQLException {\n        String query = \"DELETE FROM Users where Nickname = ?\";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1,user.getPseudo());\n        p.execute();\n    }\n    public static void Update(User user) throws SQLException {\n        String query = \"UPDATE Users SET Nickname = ? WHERE Ip = ?\";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1,user.getPseudo());\n        p.setString(2,user.getAddr());\n        p.execute();\n    }\n    public static void Insert(User user) throws SQLException {\n        String query = \"INSERT INTO Users(Nickname, Ip, Port) values (?,?,?)\";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1,user.getPseudo());\n        p.setString(2, user.getAddr());\n        p.setInt(3,user.getPort());\n        p.execute();\n    }\n    public static void Insert(Message msg) throws SQLException {\n        String query = \"INSERT INTO History(Sender, Receiver, Content,Date) values (?,?,?,?)\";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1, msg.getSender());\n        p.setString(2, msg.getReceiver());\n        p.setString(3,msg.getMsg());\n        p.setDate(4, new Date(System.currentTimeMillis()));\n        p.execute();\n    }\n\n    public static ArrayList<Message> LoadHistory(User u) throws SQLException {\n        ArrayList<Message> l = new ArrayList<>();\n        String query = \"Select * from History where Sender = ? and Receiver = ? or Sender = ? or Receiver = ? \";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1,u.getPseudo());\n        p.setString(2,\"Gwen\");\n        p.setString(3,\"Gwen\");\n        p.setString(4,u.getPseudo());\n        ResultSet rs = p.executeQuery();\n        while (rs.next()){\n            Message m = new Message(rs.getString(\"Sender\"),rs.getString(\"Receiver\"),rs.getString(\"Content\"),rs.getDate(\"Date\"));\n            l.add(m);\n\n            System.out.println(m);\n            System.out.println(\"--------------------\");\n        }\n        return l;\n    }\n    public static User LoadUser(String name) throws SQLException {\n        String query = \"Select * from Users where Nickname=?\";\n        PreparedStatement p = con.prepareStatement(query);\n        p.setString(1,name);\n        ResultSet rs = p.executeQuery();\n        //System.out.println(new User(rs.getString(\"Nickname\"), rs.getInt(\"Port\"), rs.getString(\"Ip\")));\n        return new User(rs.getString(\"Nickname\"), rs.getInt(\"Port\"), rs.getString(\"Ip\"));\n    }\n    public static void Disconnect(){\n        try {\n            con.close();\n        } catch (SQLException s ){\n            System.out.println(s);\n        }\n        System.out.println(\"Database Disconnected successfully\");\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/DatabaseManager.java b/src/main/java/DatabaseManager.java
+--- a/src/main/java/DatabaseManager.java	(revision 0d46eafbd7c95986d0444feb3e74530f7fa9c4d0)
++++ b/src/main/java/DatabaseManager.java	(date 1671006880524)
+@@ -12,14 +12,7 @@
+         }catch (SQLException s) {
+             System.out.println(s);
+         }
+-       /* String query = "SELECT * FROM main.History where ?";
+-        PreparedStatement pstmt = con.prepareStatement(query);
+-        pstmt.setString(1,"History");
+-        ResultSet rs = pstmt.executeQuery();
+-
+-        System.out.println(rs.getString("user"));
+-*/
+-        System.out.println("Database Initialised");
++        System.out.println("=====Database Initialised=====");
+ 
+ 
+     }
