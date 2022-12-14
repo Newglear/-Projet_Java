@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Connection Manager working with several Sender">
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Sender + DB test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SystemComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReceiverThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ThreadManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668590964575</updated>
-      <workItem from="1670942081903" duration="3253000" />
+      <workItem from="1670942081903" duration="5990000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit sur intelliJ">
       <created>1668591202573</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669649925835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sender + DB test">
+      <created>1670947518482</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670947518482</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit sur intelliJ" />
     <MESSAGE value="Connection Manager working with several Sender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connection Manager working with several Sender" />
+    <MESSAGE value="Sender + DB test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sender + DB test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
