@@ -5,18 +5,27 @@ import org.database.DatabaseManager;
 
 import java.net.*;
 
+import static java.lang.Thread.sleep;
+
 public class test {
 
     public static void main(String[] args) throws UnknownHostException, InterruptedException {
-        DatabaseManager db = new DatabaseManager();
-        String addr ="10.1.5.225";
 
+        String addr = "localhost";
+        InetAddress a = InetAddress.getByName(addr);
 
-        //System.out.println(a.getHostAddress());
+        System.out.println(a.getHostAddress());
 
         ConnectionManager c = new ConnectionManager();
         c.start();
-        //ThreadManager.createSenderThread(InetAddress.getByName(addr),1234,"petit suicide entre amis");
+        SendTestThread Th = new SendTestThread("localhost",1234,"????");
+        Th.start();
+        while(true) {
+            Th.Send("wesh");
+            sleep(5000);
+        }
+        //Th.interrupt();
+            //ThreadManager.createSenderThread(a, 1234, "");
     }
 
 }
