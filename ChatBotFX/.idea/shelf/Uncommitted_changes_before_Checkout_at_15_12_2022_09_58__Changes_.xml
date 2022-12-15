@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]" date="1671094691619" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 15/12/2022 09:58 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/database/User.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/network/NetworkReceiver.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/org/network/NetworkReceiver.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/NetworkReceiver.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/Main.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/org/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/network/NetworkSender.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/org/network/NetworkSender.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/NetworkSender.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/module-info.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/module-info.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/module-info.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/MainSender.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/org/MainSender.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/MainSender.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ChatBotFX/target/classes/org/database/DatabaseManager.class" />
+    <option name="AFTER_PATH" value="ChatBotFX/target/classes/org/database/DatabaseManager.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_12_2022_09_58_[Changes]/DatabaseManager.class" />
+  </binary>
+</changelist>
