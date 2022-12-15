@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Arrays;
 
 public class LoginController {
 
-    public ArrayList<String> usernames = new ArrayList<String>(Arrays.asList("Paul","Jean"));
+    public ArrayList<String> usernames = new ArrayList<>(Arrays.asList("Paul","Jean"));
 
     public boolean checkUnicity(String  username){
         boolean isFind = true;
@@ -37,9 +38,16 @@ public class LoginController {
     @FXML
     private void userLogin() throws IOException {
         if(checkUnicity(username_in.getText())) {
+            Stage stage = (Stage) bt_login.getScene().getWindow();
+            stage.setHeight(500);
+            stage.setWidth(800);
+            stage.centerOnScreen();
             App.setRoot("chat");
+
         }else{
             warning_lb.setVisible(true);
         }
     }
+
+
 }
