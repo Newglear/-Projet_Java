@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="Test commit sur intelliJ">
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/MainSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/MainSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/network/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/src/main/java/org/network/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/MainSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/database/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/database/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/network/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotFX/ChatBotFX/target/classes/org/network/NetworkSender.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="2HciqVrQmFMV41wJT8t866KHNdg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/newgz/Insa/Projet_Java/ChatBotFX",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.test">
+    <configuration name="GwenCador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GwenCador" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainSender" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="ChatBot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.MainSender" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GwenCador" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a1ec4ca-d9b5-44e2-aea3-9c7ce6021c59" name="Default Changelist" comment="" />
+      <created>1668590964575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668590964575</updated>
+      <workItem from="1670942081903" duration="3253000" />
+      <workItem from="1671093259817" duration="1330000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test commit sur intelliJ">
+      <created>1668591202573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668591202573</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Connection Manager working with several Sender">
+      <created>1669649925835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669649925835</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Connection Manager working with several Sender" />
+    <MESSAGE value="Test commit sur intelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test commit sur intelliJ" />
+  </component>
+</project>
