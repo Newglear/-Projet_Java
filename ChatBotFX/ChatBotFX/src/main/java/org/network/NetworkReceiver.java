@@ -77,7 +77,7 @@ public class NetworkReceiver extends Thread {
     }
     public void Receive_Disconnect(String obj){
         User usr = gson.fromJson(obj, User.class);
-        System.out.println("Déconnexion de " + obj);
+        System.out.println("Déconnexion \n " + usr);
 
         try{
             DatabaseManager.Remove(usr);

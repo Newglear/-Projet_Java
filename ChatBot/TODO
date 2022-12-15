@@ -1,0 +1,9 @@
+Gwen: 
+
+  Database Manager :
+      Initialisation de la DB si pas instanciée 
+      méthode de Flush des tables 
+
+  Network Manager: 
+    Gestion de check unicity en mode Nickname 
+

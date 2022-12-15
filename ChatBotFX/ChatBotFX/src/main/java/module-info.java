@@ -6,5 +6,7 @@ module org.example {
     requires java.sql;
 
     opens org.gui to javafx.fxml;
+    opens org.database to com.google.gson;
+    opens org.network to com.google.gson;
     exports org.gui;
 }

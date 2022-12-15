@@ -10,7 +10,7 @@ public class NetworkSender{
     private final DatagramSocket senderSock;
     Gson gson= new Gson();
     private final byte[] broadcastAddr= {10,32,(byte)47, (byte) 255};
-	private String broad = "10.1.255.255" ;
+	private String broad = "localhost" ;
 
     public NetworkSender(User infos, Types.UDPMode mode) throws SocketException {
             senderSock = new DatagramSocket();
