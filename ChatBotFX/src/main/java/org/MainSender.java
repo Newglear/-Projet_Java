@@ -18,6 +18,9 @@ public class MainSender {
         NetworkSender S1 = new NetworkSender(usr, Types.UDPMode.UserInfos);
         usr= new User("Wesh",1234,"localhost");
         NetworkSender S2 = new NetworkSender(usr, Types.UDPMode.Nickname);
+
+
+
         //NetworkSender S3 = new NetworkSender(usr, Types.UDPMode.Disconnect);
 
     }
