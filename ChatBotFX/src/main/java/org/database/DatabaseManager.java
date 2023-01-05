@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class DatabaseManager {
     private static Connection con;
     public DatabaseManager(){
-
         try {
             con = DriverManager.getConnection("jdbc:sqlite:ChaDBsqlite");
         }catch (SQLException s) {
@@ -16,6 +15,47 @@ public class DatabaseManager {
         System.out.println("Database Initialised");
     }
 
+    public static void Initialisation() throws SQLException {
+        System.out.println("===== Initialisation =====");
+        String query = "create table if not exists main.History " +
+                "( " +
+                    "Id       integer not null " +
+                    "primary key autoincrement, " +
+                    "Sender   VARCHAR not null, " +
+                    "Receiver VARCHAR not null, " +
+                    "Content  VARCHAR, " +
+                    "Date     Date" +
+                ")";
+        PreparedStatement p = con.prepareStatement(query);
+        p.execute();
+        System.out.println("===== History Table Initialized =====");
+        query = "create table if not exists main.Users " +
+                "( " +
+                    "ID       integer not null " +
+                    "primary key autoincrement," +
+                    "Nickname VARCHAR              not null, " +
+                    "Ip       VARCHAR(120)         not null, " +
+                    "Port     integer default 1234 not null" +
+                ")";
+        p = con.prepareStatement(query);
+        p.execute();
+        System.out.println("===== User Table Initialized =====");
+        System.out.println("===== Done =====");
+    }
+    public static  void Flush() throws SQLException {
+        Flush_History();
+        Flush_Users();
+    }
+    public static void Flush_Users() throws SQLException {
+        String query = "Delete from Users";
+        PreparedStatement p = con.prepareStatement(query);
+        p.execute();
+    }
+    public static void Flush_History() throws SQLException {
+        String query = "Delete from History";
+        PreparedStatement p = con.prepareStatement(query);
+        p.execute();
+    }
     public static ArrayList<String> LoadUsers() throws SQLException {
         ArrayList<String> l = new ArrayList<>();
         String query = "Select * from Users";
@@ -93,5 +133,7 @@ public class DatabaseManager {
         }
         System.out.println("Database Disconnected successfully");
     }
+
+
 
 }
