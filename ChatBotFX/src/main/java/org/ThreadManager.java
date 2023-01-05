@@ -17,8 +17,8 @@ public class ThreadManager {
         receiverThreadList.get(receiverThreadList.size()-1).start();
     }
 
-    public static void createSenderThread(InetAddress IPaddress, int publicPort, String message) {
-        senderThreadList.add(new SenderThread(IPaddress,publicPort,message));
+    public static void createSenderThread(InetAddress IPaddress, int publicPort) {
+        senderThreadList.add(new SenderThread(IPaddress,publicPort));
         senderThreadList.get(senderThreadList.size()-1).start();
     }
 

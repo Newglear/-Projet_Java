@@ -13,16 +13,7 @@ public class DatabaseManager {
         }catch (SQLException s) {
             System.out.println(s);
         }
-       /* String query = "SELECT * FROM main.History where ?";
-        PreparedStatement pstmt = con.prepareStatement(query);
-        pstmt.setString(1,"History");
-        ResultSet rs = pstmt.executeQuery();
-
-        System.out.println(rs.getString("user"));
-*/
         System.out.println("Database Initialised");
-
-
     }
 
     public static ArrayList<String> LoadUsers() throws SQLException {
