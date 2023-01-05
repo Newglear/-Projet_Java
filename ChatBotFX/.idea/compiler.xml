@@ -9,5 +9,8 @@
         <module name="ChatBotFX" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ChatBotFX" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
