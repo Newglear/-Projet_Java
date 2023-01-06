@@ -133,7 +133,4 @@ public class DatabaseManager {
         }
         System.out.println("Database Disconnected successfully");
     }
-
-
-
 }

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class Main {
 
-    public static void main(String[] args) throws UnknownHostException, SocketException, SQLException {
+    public static void main(String[] args) throws SQLException {
         SystemComponents sys = new SystemComponents();
         DatabaseManager.Initialisation();
         DatabaseManager.Flush();

@@ -4,36 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ff7987-a1ae-440c-9498-8f92821b9a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_40_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="07ff7987-a1ae-440c-9498-8f92821b9a07" name="Changes" comment="Database Flush and init">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4efb57a5-f99b-49ac-ac3e-d3616175c98b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4efb57a5-f99b-49ac-ac3e-d3616175c98b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MainReceive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MainReceive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MainSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MainSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/Types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -66,7 +70,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/newgz/Insa/Projet_Java/ChatBotFX&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/newgz/Insa/temp/chatsystem-demo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,7 +91,7 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.UDPBroadcastTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.Main" />
       <module name="ChatBotFX" />
@@ -129,32 +133,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.test" />
+    <configuration name="UDPBroadcastTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChatBotFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="chatsystem.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="chatsystem.network" />
+      <option name="MAIN_CLASS_NAME" value="chatsystem.network.UDPBroadcastTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPBroadcastTest.SendReceiveContacts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChatBotFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chatsystem.network.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chatsystem.network" />
+      <option name="MAIN_CLASS_NAME" value="chatsystem.network.UDPBroadcastTest" />
+      <option name="METHOD_NAME" value="SendReceiveContacts" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.test" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.MainReceive" />
       <item itemvalue="Application.MainSender" />
+      <item itemvalue="JUnit.UDPBroadcastTest" />
+      <item itemvalue="JUnit.UDPBroadcastTest.SendReceiveContacts" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="Application.MainSender" />
         <item itemvalue="Application.MainReceive" />
-        <item itemvalue="Application.MainSender" />
+        <item itemvalue="JUnit.UDPBroadcastTest.SendReceiveContacts" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -177,10 +200,24 @@
       <workItem from="1672913466935" duration="20000" />
       <workItem from="1672913503441" duration="58000" />
       <workItem from="1672913574814" duration="3034000" />
+      <workItem from="1672988782592" duration="8223000" />
+      <workItem from="1673015445052" duration="8388000" />
     </task>
+    <task id="LOCAL-00001" summary="Database Flush and init">
+      <created>1672917425300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672917425300</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Database Flush and init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Flush and init" />
   </component>
 </project>

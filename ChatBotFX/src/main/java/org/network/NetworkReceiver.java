@@ -1,6 +1,7 @@
 package org.network;
 
 import com.google.gson.Gson;
+import org.SystemComponents;
 import org.database.User;
 import org.database.DatabaseManager;
 
@@ -11,23 +12,40 @@ import java.net.SocketException;
 import java.sql.SQLException;
 
 public class NetworkReceiver extends Thread {
+    private static int ContactCount;
     Gson gson = new Gson();
+    static boolean ThreadMode,NicknameTestMode ;
+    int port;
     private DatagramSocket recvSock;
 
-    public NetworkReceiver(String id){
+    public NetworkReceiver(String id,boolean mode,int port){
         super(id);
+        this.ThreadMode = mode;
+        NicknameTestMode = false;
+        this.port = port;
+        ContactCount = 0;
         System.out.println("====== RECEIVING THREAD INITIATED ======");
         start();
     }
 
+    public static void IncrementCount(){
+        ContactCount++;
+        System.out.println("Count "+ getContactCount());
+    }
+
+    public static int getContactCount(){
+        return ContactCount;
+    }
+    public static void resetContactCount(){
+        ContactCount = 0;
+    }
     @Override
     public void run() {
-        Receive();
-
+            Receive();
     }
-    private void Receive(){
+    private void Receive() {
         try {
-            recvSock = new DatagramSocket(1234);
+            recvSock = new DatagramSocket(port);
         } catch (SocketException e) {
             throw new RuntimeException(e);
         }
@@ -39,6 +57,10 @@ public class NetworkReceiver extends Thread {
                 recvSock.receive(inPacket);
                 String var = new String(inPacket.getData(), 0, inPacket.getLength());
                 NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
+                User usr = gson.fromJson(msg.getObject(), User.class);
+
+                if(!usr.getAddr().equals(SystemComponents.getCurrentIp()) &&  !ThreadMode )
+                    continue;
                 switch (msg.getMode()){
                     case UserInfos:
                         Receive_Infos(msg.getObject());
@@ -46,10 +68,15 @@ public class NetworkReceiver extends Thread {
                     case Nickname:
                         Receive_Nickname(msg.getObject());
                         break;
+                    case Answer_Infos:
+                        Add_User(msg.getObject());
+                    case Error:
+                        break; // TODO : Ajouter le handler d'erreur.
                     case Disconnect:
                         Receive_Disconnect(msg.getObject());
                         break;
                 }
+                IncrementCount();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -57,24 +84,36 @@ public class NetworkReceiver extends Thread {
     }
 
 
-    public void Receive_Infos(String obj){
+    public void Receive_Infos(String obj) throws SocketException {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Nouvel Utilisateur "+usr);
-        try{
-            DatabaseManager.Insert(usr);
-        } catch (SQLException s){
-            System.out.println(s);
+        if(usr.getPseudo().equals(SystemComponents.getCurrentNickname()) && (!ThreadMode||NicknameTestMode )){
+            NetworkSender send  = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
+        }else
+        {
+            try{
+                usr.setPseudo("Gwen");
+                NetworkSender sender = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Answer_Infos);
+                DatabaseManager.Insert(usr);
+            } catch (SQLException s){
+                System.out.println(s);
+            }
         }
     }
-    public void Receive_Nickname(String obj){
+    public void Receive_Nickname(String obj) throws SocketException {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
-        try {
-            DatabaseManager.Update(usr);
-        } catch ( SQLException s){
-            System.out.println(s);
+        if(usr.getPseudo().equals(SystemComponents.getCurrentNickname()) && (!ThreadMode||NicknameTestMode)){
+            NetworkSender send  = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
+        }else {
+            try {
+                DatabaseManager.Update(usr);
+            } catch (SQLException s) {
+                System.out.println(s);
+            }
         }
     }
+
     public void Receive_Disconnect(String obj){
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Déconnexion de " + obj);
@@ -84,6 +123,23 @@ public class NetworkReceiver extends Thread {
         }catch (SQLException s){
             System.out.println(s);
         }
+    }
+
+    public void Add_User(String obj){
+        System.out.println("Réponse recue ");
+        User usr = gson.fromJson(obj, User.class);
+        try {
+            DatabaseManager.Update(usr);
+        } catch (SQLException s) {
+            System.out.println(s);
+        }
+    }
+
+    public static void Enable_ThreadMode_Mode(boolean enable){
+        ThreadMode = enable;
+    }
+    public static void Enable_Nickname_Mode(boolean enable){
+        NicknameTestMode = enable;
     }
 
 }
