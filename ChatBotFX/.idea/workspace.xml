@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07ff7987-a1ae-440c-9498-8f92821b9a07" name="Changes" comment="Modification des threads network receiver et sender &#10;Test unitaires network">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/chatsystem/conversation/TCPConversationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/chatsystem/database/ContactTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/chatsystem/database/HistoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4efb57a5-f99b-49ac-ac3e-d3616175c98b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4efb57a5-f99b-49ac-ac3e-d3616175c98b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conv/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conv/ReceiverThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/database/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/MainReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MainReceive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MainSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/ReceiverThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/ReceiverThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/Types$UDPMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/Types$UDPMode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +22,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
+        <entry key="$PROJECT_DIR$/.." value="Unit_Test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/chatsystem/conversation/TCPConversationTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,22 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/newgz/Insa/Projet_Java/ChatBotFX",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/newgz/Insa/Projet_Java/ChatBotFX&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -184,11 +158,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HistoryTests" />
+        <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="JUnit.HistoryTests.Add_Single_Message" />
+        <item itemvalue="JUnit.HistoryTests" />
         <item itemvalue="JUnit.ContactTests" />
         <item itemvalue="Application.test" />
-        <item itemvalue="JUnit.UDPBroadcastTest" />
       </list>
     </recent_temporary>
   </component>
@@ -235,6 +209,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Database Flush and init" />
