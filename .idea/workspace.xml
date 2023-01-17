@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69361075-f899-47be-a6ed-16b7484f3a13" name="Default Changelist" comment="mefno">
+      <change afterPath="$PROJECT_DIR$/ChatBotFX/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatBotFX/src/test/java/chatsystem/conversation/TCPConversationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatBotFX/src/test/java/chatsystem/database/DatabaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/ChaDBsqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/MainReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/MainReceive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/MainSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/SystemComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/SystemComponents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/Types$UDPMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatBotFX/target/classes/org/network/Types$UDPMode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,19 +42,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/newgz/Insa/Projet_Java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/newgz/Insa/Projet_Java/ChatBotFX",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,6 +65,7 @@
       <updated>1671097844956</updated>
       <workItem from="1672911363231" duration="310000" />
       <workItem from="1672912954702" duration="179000" />
+      <workItem from="1673960396642" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="mefno">
       <created>1671097910558</created>

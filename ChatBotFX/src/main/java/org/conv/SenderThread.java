@@ -6,6 +6,7 @@ import org.database.DatabaseManager;
 
 import java.io.*;
 import java.net.*;
+import java.sql.Date;
 import java.sql.SQLException;
 
 public class SenderThread extends Thread {
@@ -43,6 +44,7 @@ public class SenderThread extends Thread {
 
     public void Send(Message msg){
         try {
+            msg.setSent(true);
             outChannel = new PrintWriter(convSocket.getOutputStream(), true);
             outChannel.println(gson.toJson(msg));
             DatabaseManager.Insert(msg);

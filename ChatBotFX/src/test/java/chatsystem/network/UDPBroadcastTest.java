@@ -26,7 +26,7 @@ public class UDPBroadcastTest {
     static SystemComponents sys;
     @BeforeClass
     public static void initSystem() {
-        sys = new SystemComponents();
+        sys = SystemComponents.getInstance();
     }
     @Before
     public void initUdp() throws SQLException {

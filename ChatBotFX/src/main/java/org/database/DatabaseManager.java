@@ -21,8 +21,8 @@ public class DatabaseManager {
                 "( " +
                     "Id       integer not null " +
                     "primary key autoincrement, " +
-                    "Sender   VARCHAR not null, " +
-                    "Receiver VARCHAR not null, " +
+                    "UserID  VARCHAR not null, "+
+                    "Sent    Bool    not null,"+
                     "Content  VARCHAR, " +
                     "Date     Date" +
                 ")";
@@ -36,6 +36,7 @@ public class DatabaseManager {
                     "Nickname VARCHAR              not null, " +
                     "Ip       VARCHAR(120)         not null, " +
                     "Port     integer default 1234 not null" +
+                    "State    Bool" +
                 ")";
         p = con.prepareStatement(query);
         p.execute();
@@ -89,27 +90,38 @@ public class DatabaseManager {
         p.setInt(3,user.getPort());
         p.execute();
     }
-    public static void Insert(Message msg) throws SQLException {
-        String query = "INSERT INTO History(Sender, Receiver, Content,Date) values (?,?,?,?)";
+
+    public static Integer LoadUserID(String name) throws SQLException {
+        String query = "SELECT ID from Users where Nickname = ? ";
         PreparedStatement p = con.prepareStatement(query);
-        p.setString(1, msg.getSender());
-        p.setString(2, msg.getReceiver());
+        p.setString(1, name);
+        ResultSet r = p.executeQuery();
+        return r.getInt("ID");
+    }
+    public static void Insert(Message msg) throws SQLException {
+        String query = "INSERT INTO History(UserID,Sent, Content,Date) values (?,?,?,?)";
+        PreparedStatement p = con.prepareStatement(query);
+        p.setString(1, LoadUserID(msg.getSender()).toString());
+        p.setString(2, String.valueOf(msg.isSent()));
         p.setString(3,msg.getMsg());
         p.setDate(4, new Date(System.currentTimeMillis()));
         p.execute();
     }
-
+    public static void Disconnect_User(User u) throws  SQLException {
+        String query = "UPDATE Users Set State = ? where ID = ?";
+        PreparedStatement p  = con.prepareStatement(query);
+        p.setBoolean(1,false);
+        p.setInt(2,DatabaseManager.LoadUserID(u.getPseudo()));
+        p.execute();
+    }
     public static ArrayList<Message> LoadHistory(User u) throws SQLException {
         ArrayList<Message> l = new ArrayList<>();
-        String query = "Select * from History where Sender = ? and Receiver = ? or Sender = ? or Receiver = ? ";
+        String query = "Select Nickname,Content,Sent,History.Date from History inner join Users on Users.ID = History.UserID where UserID = ?";
         PreparedStatement p = con.prepareStatement(query);
-        p.setString(1,u.getPseudo());
-        p.setString(2,"Gwen");
-        p.setString(3,"Gwen");
-        p.setString(4,u.getPseudo());
+        p.setInt(1,LoadUserID(u.getPseudo()));
         ResultSet rs = p.executeQuery();
         while (rs.next()){
-            Message m = new Message(rs.getString("Sender"),rs.getString("Receiver"),rs.getString("Content"),rs.getDate("Date"));
+            Message m = new Message(rs.getString("Nickname"),rs.getBoolean("Sent"),rs.getString("Content"),rs.getDate("Date"));
             l.add(m);
 
             System.out.println(m);
@@ -122,7 +134,6 @@ public class DatabaseManager {
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1,name);
         ResultSet rs = p.executeQuery();
-        //System.out.println(new User(rs.getString("Nickname"), rs.getInt("Port"), rs.getString("Ip")));
         return new User(rs.getString("Nickname"), rs.getInt("Port"), rs.getString("Ip"));
     }
     public static void Disconnect(){

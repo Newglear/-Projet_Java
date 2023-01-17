@@ -39,6 +39,7 @@ public class ReceiverThread extends Thread {
                 System.out.println("=====Receiver=====");
                 Message msg = gson.fromJson(message, Message.class);
                 msg.setDate(new Date(System.currentTimeMillis()));
+                msg.toggleSent();
                 System.out.println(msg);
                 System.out.println("==================");
                 try{

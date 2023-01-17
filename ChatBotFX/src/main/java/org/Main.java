@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-        SystemComponents sys = new SystemComponents();
+        SystemComponents sys = SystemComponents.getInstance();
         DatabaseManager.Initialisation();
         DatabaseManager.Flush();
     }

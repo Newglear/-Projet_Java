@@ -14,7 +14,8 @@ import static java.lang.Thread.sleep;
 public class test {
 
     public static void main(String[] args) throws UnknownHostException, InterruptedException, SQLException {
-        SystemComponents sys = new SystemComponents();
+        SystemComponents sys = SystemComponents.getInstance();
+        DatabaseManager.Flush();
         String addr = "localhost";
         InetAddress a = InetAddress.getByName(addr);
 
@@ -28,7 +29,7 @@ public class test {
         Th.start();
         while(true) {
             sleep(1000);
-            Th.Send(new Message("Gwen","Random","Wesh"));
+            Th.Send(new Message("Gwen",true,"Wesh"));
         }
 
     }
