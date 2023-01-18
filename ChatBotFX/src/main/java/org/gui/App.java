@@ -12,16 +12,17 @@ import java.io.IOException;
  * JavaFX App
  */
 public class App extends Application {
-
+    //login : height 455 / width 468 630 980
     private static Scene scene;
-    private int height = 468;
-    private int width = 455;
+    private int height = 455;
+    private int width = 468;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("login"), height, width);
+        scene = new Scene(loadFXML("login"), width, height);
         stage.setScene(scene);
         stage.setResizable(false);
+        stage.setTitle("Login");
         stage.show();
     }
 
@@ -36,6 +37,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        //System.out.println(System.getProperty("user.dir"));
         launch();
     }
 

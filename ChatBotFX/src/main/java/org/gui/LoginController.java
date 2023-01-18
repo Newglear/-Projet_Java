@@ -13,6 +13,7 @@ import java.util.Arrays;
 public class LoginController {
 
     public ArrayList<String> usernames = new ArrayList<>(Arrays.asList("Paul","Jean"));
+    public String userNickname;
 
     public boolean checkUnicity(String  username){
         boolean isFind = true;
@@ -37,13 +38,14 @@ public class LoginController {
 
     @FXML
     private void userLogin() throws IOException {
-        if(checkUnicity(username_in.getText())) {
+        String text = username_in.getText();
+        if(checkUnicity(text)) {
             Stage stage = (Stage) bt_login.getScene().getWindow();
-            stage.setHeight(500);
-            stage.setWidth(800);
-            stage.centerOnScreen();
             App.setRoot("chat");
-
+            stage.setHeight(660);
+            stage.setWidth(980);
+            stage.setTitle("Chador");
+            stage.centerOnScreen();
         }else{
             warning_lb.setVisible(true);
         }
