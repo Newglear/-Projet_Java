@@ -5,15 +5,24 @@ import org.database.User;
 
 import java.io.IOException;
 import java.net.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Enumeration;
 
 public class NetworkSender{
     private final DatagramSocket senderSock;
     int destinationPort;
     Gson gson= new Gson();
-	private String broad = "255.255.255.255" ;
+	private InetAddress broad ;
 
     public NetworkSender(User infos, Types.UDPMode mode,int port) throws SocketException {
         senderSock = new DatagramSocket();
+        try{
+            //broad = getBroadcastAddress().get(0);
+            broad = InetAddress.getByName("255.255.255.255");
+        }catch (UnknownHostException e){
+            e.printStackTrace();
+        }
         this.destinationPort = port;
         senderSock.setBroadcast(true);
         System.out.println("===== Phase d'envoi =====");
@@ -36,6 +45,11 @@ public class NetworkSender{
     }
     public NetworkSender(User infos, String addr,int port,Types.UDPMode mode) throws SocketException {
         senderSock = new DatagramSocket();
+        try{
+            broad = getBroadcastAddress().get(0);
+        }catch (UnknownHostException e){
+            e.printStackTrace();
+        }
         System.out.println("===== Phase d'envoi =====");
         try{
             senderSock.setBroadcast(false);
@@ -58,7 +72,7 @@ public class NetworkSender{
     private void Send_User_Infos(User usr) throws IOException {
         String user = gson.toJson(usr);
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.UserInfos, user));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), destinationPort);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),broad, destinationPort);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");
@@ -84,7 +98,7 @@ public class NetworkSender{
     }
     private void Send_Nickname(User usr) throws IOException {
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Nickname, gson.toJson(usr)));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), destinationPort);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),broad, destinationPort);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");
@@ -92,11 +106,48 @@ public class NetworkSender{
     }
     private void Disconnect(User usr) throws IOException {
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Disconnect, gson.toJson(usr)));
-        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), destinationPort);
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),broad, destinationPort);
         System.out.println("Envoi des infos");
         senderSock.send(outPacket);
         System.out.println("Infos Envoyées");
         senderSock.close();
+    }
+
+    public static ArrayList<InetAddress> getBroadcastAddress() throws SocketException, UnknownHostException {
+        String[] a = new String[0];
+        Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
+        ArrayList<InetAddress> addressList = new ArrayList<>();
+        ArrayList<InetAddress> list = new ArrayList<>();
+        while (interfaces.hasMoreElements()) {
+            NetworkInterface networkInterface = interfaces.nextElement();
+            if (networkInterface.isLoopback()) {
+                continue;
+            }
+            if (!networkInterface.isUp()) {
+                continue;
+            }
+            for (InterfaceAddress i : networkInterface.getInterfaceAddresses()) {
+                InetAddress address = i.getAddress();
+                if (!address.equals(InetAddress.getByName("127.0.0.1"))) {
+                    addressList.add(address);
+                }
+            }
+        }
+        for(InetAddress addr : addressList ){
+            if(addr.getHostName().matches("(\\d{1,3}.){3}\\d{1,3}")) {
+                a = addr.getHostName().split("[.]");
+                a[3] = "255";
+                a[0] += ".";
+                a[1] += ".";
+                a[2] += ".";
+                String s = "";
+                for (String part : a) {
+                    s += part;
+                }
+                list.add(InetAddress.getByName(s));
+            }
+        }
+        return list;
     }
 
 }
