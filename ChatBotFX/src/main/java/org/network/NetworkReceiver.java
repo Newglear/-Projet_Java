@@ -71,7 +71,8 @@ public class NetworkReceiver extends Thread {
                     case Answer_Infos:
                         Add_User(msg.getObject());
                     case Error:
-                        break; // TODO : Ajouter le handler d'erreur.
+                        SystemComponents.setUnicityCheck(true);
+                        break;
                     case Disconnect:
                         Receive_Disconnect(msg.getObject());
                         break;
@@ -92,7 +93,6 @@ public class NetworkReceiver extends Thread {
         }else
         {
             try{
-                usr.setPseudo("Gwen");
                 NetworkSender sender = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Answer_Infos);
                 DatabaseManager.Insert(usr);
             } catch (SQLException s){

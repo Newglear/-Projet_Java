@@ -10,7 +10,7 @@
    <children>
       <VBox prefHeight="630.0" prefWidth="277.0" style="-fx-background-color: green;">
          <children>
-            <AnchorPane onMouseClicked="#displayUsersStatus" prefHeight="120.0" prefWidth="277.0" style="-fx-background-color: #434343;">
+            <AnchorPane onMouseClicked="#displayContacts" prefHeight="120.0" prefWidth="277.0" style="-fx-background-color: #434343;">
                <children>
                   <Button layoutX="43.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: white; -fx-background-radius: 13;" text="Change my pseudo">
                      <font>
@@ -56,7 +56,7 @@
                <right>
                   <StackPane prefHeight="61.0" prefWidth="55.0" style="-fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2; -fx-background-color: #ff5555; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
                      <children>
-                        <ImageView fitHeight="36.0" fitWidth="32.0" onMouseClicked="#displayMessageReceived" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="36.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/iconSend.png" />
                            </image>

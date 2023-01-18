@@ -14,19 +14,27 @@ import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
+import org.SystemComponents;
+import org.ThreadManager;
+import org.conv.SenderThread;
+import org.database.DatabaseManager;
+import org.database.Message;
+import org.network.NetworkSender;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.sql.SQLException;
 
 public class ChatController {
 
 
-
+    private String selectedUser = "Connard";
     private String pathIconConnected = "src/main/resources/org/gui/images/iconConnected.png";
     private String pathIconDisconnected = "src/main/resources/org/gui/images/iconDisconnected.png";
 
     @FXML
-    private VBox vboxUsersConv;
+    private  VBox vboxUsersConv;
 
     @FXML
     private VBox vboxUsersMessages;
@@ -38,7 +46,7 @@ public class ChatController {
     private ScrollPane scrollMessage;
 
     @FXML
-    private void createUserBorderPane(boolean isConnected) throws IOException {
+    private void createUserBorderPane(String nickname, boolean isConnected) throws IOException {
         //create Border Pane
         BorderPane bPaneUsers = new BorderPane();
         bPaneUsers.setPrefWidth(253);
@@ -63,7 +71,7 @@ public class ChatController {
         //Create Label
         Label lbName = new Label();
         lbName.setFont(Font.font("Comfortaa", FontWeight.LIGHT, FontPosture.REGULAR, 15));
-        lbName.setText("Julian");
+        lbName.setText(nickname);
 
         //Add Label and ImageView to BorderPane
         bPaneUsers.setLeft(lbName);
@@ -76,26 +84,34 @@ public class ChatController {
     }
 
     @FXML
-    private void displayMessageSent() throws IOException {
+    private void displayMessageSent() throws IOException, SQLException {
         String inputText = messageInput.getText();
         if(inputText.length() > 0){
             createMessageBorderPane(inputText, false);
             messageInput.clear();
+            /*SenderThread th= ThreadManager.getThread(user);
+            if((th == null ){
+                ThreadManager.createSenderThread(InetAddress.getByName(DatabaseManager.LoadUser(selectedUser).getAddr()),DatabaseManager.LoadUser(selectedUser).getPort());
+            }
+            th.Send(new Message(SystemComponents.getCurrentNickname(),true,inputText));*/
         }
     }
 
-    @FXML
-    private void displayMessageReceived() throws IOException {
+    /*private void displayMessageReceived(String message) throws IOException {
         String inputText = messageInput.getText();
         if(inputText.length() > 0){
-            createMessageBorderPane(inputText, true);
+            createMessageBorderPane(message, true);
             messageInput.clear();
         }
-    }
+    }*/
 
     @FXML
-    private void displayUsersStatus() throws IOException {
-        createUserBorderPane(true);
+    public void displayContacts() throws SQLException, IOException {
+        for(String s: DatabaseManager.LoadUsers()){
+            System.out.println(s);
+            System.out.println(DatabaseManager.LoadUsers());
+            createUserBorderPane(s,true);
+        }
     }
 
     @FXML
