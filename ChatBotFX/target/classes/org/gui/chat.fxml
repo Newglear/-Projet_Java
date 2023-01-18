@@ -10,7 +10,7 @@
    <children>
       <VBox prefHeight="630.0" prefWidth="277.0" style="-fx-background-color: green;">
          <children>
-            <AnchorPane prefHeight="120.0" prefWidth="277.0" style="-fx-background-color: #434343;">
+            <AnchorPane onMouseClicked="#displayUsersStatus" prefHeight="120.0" prefWidth="277.0" style="-fx-background-color: #434343;">
                <children>
                   <Button layoutX="43.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: white; -fx-background-radius: 13;" text="Change my pseudo">
                      <font>
@@ -38,7 +38,7 @@
          <children>
             <ScrollPane fx:id="scrollMessage" hbarPolicy="NEVER" prefHeight="586.0" prefWidth="704.0" vbarPolicy="NEVER">
                <content>
-                  <VBox fx:id="vboxUsersMessages" onMouseClicked="#createUserBorderPane" prefHeight="561.0" prefWidth="704.0" spacing="5.0" style="-fx-background-color: white;">
+                  <VBox fx:id="vboxUsersMessages" prefHeight="561.0" prefWidth="704.0" spacing="5.0" style="-fx-background-color: white;">
                      <padding>
                         <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                      </padding>

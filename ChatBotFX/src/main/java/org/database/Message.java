@@ -3,22 +3,39 @@ package org.database;
 import java.sql.Date;
 
 public class Message {
-    private String Sender,Receiver;
+    private String Sender;
+
+    private boolean Sent;
     private String msg;
     private Date date;
 
-    public Message(String S, String  R, String m, Date d) {
+    public Message(String S, boolean Sent, String m, Date d) {
         this.Sender = S;
-        this.Receiver = R;
+        this.Sent = Sent;
         this.msg = m;
         this.date = d;
     }
-    public Message(String S, String  R, String m){
+    public Message(String S, boolean Sent, String m){
         this.Sender = S;
-        this.Receiver = R;
+        this.Sent = Sent;
         this.msg  = m ;
     }
 
+    public Message(String S, String m){
+        this.Sender = S;
+        this.msg = m;
+    }
+    public boolean isSent() {
+        return Sent;
+    }
+
+    public void setSent(boolean Sent) {
+        this.Sent = Sent;
+    }
+
+    public void toggleSent(){
+        this.Sent = !Sent;
+    }
     public String getSender() {
         return Sender;
     }
@@ -27,13 +44,6 @@ public class Message {
         Sender = sender;
     }
 
-    public String getReceiver() {
-        return Receiver;
-    }
-
-    public void setReceiver(String receiver) {
-        Receiver = receiver;
-    }
 
     public String getMsg() {
         return msg;
@@ -54,7 +64,7 @@ public class Message {
     @Override
     public String toString() {
         return "Sender: "+ this.Sender +
-                "\nReceiver: "+ this.Receiver +
+                "\nReceiver: "+ this.Sent +
                 "\nContent: "+ this.msg +
                 "\nDate: "+ this.date;
     }
