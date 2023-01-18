@@ -38,7 +38,7 @@ public class ChatController {
     private ScrollPane scrollMessage;
 
     @FXML
-    private void createUserBorderPane() throws IOException {
+    private void createUserBorderPane(boolean isConnected) throws IOException {
         //create Border Pane
         BorderPane bPaneUsers = new BorderPane();
         bPaneUsers.setPrefWidth(253);
@@ -50,7 +50,11 @@ public class ChatController {
 
         //create ImageView
         ImageView imViewStatus = new ImageView();
-        imViewStatus.setImage(new Image(new FileInputStream(pathIconConnected)));
+        if(isConnected){
+            imViewStatus.setImage(new Image(new FileInputStream(pathIconConnected)));
+        }else{
+            imViewStatus.setImage(new Image(new FileInputStream(pathIconDisconnected)));
+        }
         imViewStatus.setFitHeight(28.0);
         imViewStatus.setFitWidth(34.0);
         imViewStatus.setPickOnBounds(true);
@@ -90,6 +94,11 @@ public class ChatController {
     }
 
     @FXML
+    private void displayUsersStatus() throws IOException {
+        createUserBorderPane(true);
+    }
+
+    @FXML
     private void createMessageBorderPane(String message, boolean isReceived) throws IOException {
         int stackPaneMaxWidth = 442;
         int stackPaneWidth;
@@ -106,7 +115,7 @@ public class ChatController {
             labelSize = 422*message.length()/50;
         }else{
             stackPaneWidth = stackPaneMaxWidth;
-            stackPaneHeight = stackPaneMinHeight + (message.length() / 50)*10;
+            stackPaneHeight = stackPaneMinHeight + (message.length() / 50)*15;
             labelSize = 421;
         }
 
