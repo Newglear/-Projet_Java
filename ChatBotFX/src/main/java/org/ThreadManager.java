@@ -29,5 +29,13 @@ public class ThreadManager {
             throw new Exception("Already initialized");
         }
     }
+    public static SenderThread getThread(String Address){
+        for(SenderThread th: senderThreadList){
+            if(th.getName() == Address){
+                return th;
+            }
+        }
+        return null;
+    }
 
 }

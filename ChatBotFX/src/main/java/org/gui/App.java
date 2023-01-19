@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import org.SystemComponents;
 import org.database.DatabaseManager;
 import org.database.User;
+import org.network.Types;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -21,14 +22,20 @@ import java.util.List;
  */
 public class App extends Application {
     //login : height 455 / width 468 630 980
+    private static App app = null;
     private static Scene scene;
+    public static FXMLLoader fxmlLoader;
     private int height = 455;
     private int width = 468;
     private ChatController cc = new ChatController();
 
+    public static void handleDatabase(Types.DataEvent ev, String data){
+
+    }
     @Override
     public void start(Stage stage) throws IOException {
 
+        app = this;
         scene = new Scene(loadFXML("login"), width, height);
         stage.setScene(scene);
         stage.setResizable(false);
@@ -41,8 +48,8 @@ public class App extends Application {
     }
 
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+    public static Parent loadFXML(String fxml) throws IOException {
+        fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 

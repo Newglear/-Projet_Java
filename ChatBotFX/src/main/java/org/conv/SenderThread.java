@@ -18,7 +18,7 @@ public class SenderThread extends Thread {
     int publicReceiverPort;
     int receiverPort;
     public SenderThread(InetAddress IPaddress, int publicPort) {
-        super("sender"+(number++));
+        super(IPaddress.getHostName());
         this.adressReceiver = IPaddress;
         this.publicReceiverPort = publicPort;
     }

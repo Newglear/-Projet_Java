@@ -1,5 +1,7 @@
 package org.database;
 
+import org.gui.App;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -89,6 +91,7 @@ public class DatabaseManager {
         p.setString(2, user.getAddr());
         p.setInt(3,user.getPort());
         p.execute();
+
     }
 
     public static Integer LoadUserID(String name) throws SQLException {

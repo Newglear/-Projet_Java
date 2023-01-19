@@ -1,5 +1,6 @@
 package org.gui;
 
+import com.google.gson.Gson;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -19,12 +20,18 @@ import org.ThreadManager;
 import org.conv.SenderThread;
 import org.database.DatabaseManager;
 import org.database.Message;
+import org.database.User;
 import org.network.NetworkSender;
+import org.network.Types;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
+
+import static java.lang.Thread.sleep;
 
 public class ChatController {
 
@@ -89,14 +96,23 @@ public class ChatController {
         if(inputText.length() > 0){
             createMessageBorderPane(inputText, false);
             messageInput.clear();
-            /*SenderThread th= ThreadManager.getThread(user);
-            if((th == null ){
+            SenderThread th= ThreadManager.getThread(selectedUser);
+            if(th == null ){
                 ThreadManager.createSenderThread(InetAddress.getByName(DatabaseManager.LoadUser(selectedUser).getAddr()),DatabaseManager.LoadUser(selectedUser).getPort());
             }
-            th.Send(new Message(SystemComponents.getCurrentNickname(),true,inputText));*/
+            th.Send(new Message(SystemComponents.getCurrentNickname(),true,inputText));
         }
     }
 
+    public void messsageReceiveHandler(Message m) throws IOException {
+        createMessageBorderPane(m.getMsg(),true);
+    }
+    public void userReceiveHandler(String name) throws IOException {
+        createUserBorderPane(name,true);
+    }
+    public void userDeleteHandler(String name){
+        return;
+    }
     /*private void displayMessageReceived(String message) throws IOException {
         String inputText = messageInput.getText();
         if(inputText.length() > 0){
@@ -104,6 +120,27 @@ public class ChatController {
             messageInput.clear();
         }
     }*/
+    @FXML
+    private void changeNickname() throws SocketException, InterruptedException, UnknownHostException {
+        String nickname = username_in.getText();
+        try {
+            InetAddress Baddr = InetAddress.getByName("255.255.255.255");
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        User u = new User(nickname,SystemComponents.getPort(),SystemComponents.getCurrentIp());
+        NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos,SystemComponents.getPort());
+
+        sleep(1000);
+        if(SystemComponents.UnicityCheck()){
+            // Change the nickname in the DB and display
+            SystemComponents.setUnicityCheck(false);
+            SystemComponents.setCurrentNickname(nickname);
+        }else{
+            SystemComponents.setUnicityCheck(false);
+            // Warning
+        }
+    }
 
     @FXML
     public void displayContacts() throws SQLException, IOException {
@@ -175,5 +212,24 @@ public class ChatController {
         //Add BorderPane to Vbox
         vboxUsersMessages.getChildren().add(bPaneMessage);
         vboxUsersMessages.heightProperty().addListener(observable -> scrollMessage.setVvalue(1D));
+    }
+
+    public void handleDatabaseHandler(Types.DataEvent event,String data) throws IOException {
+        switch(event){
+            case NewUser:
+                userReceiveHandler(data);
+                break;
+            case RemUser:
+                userDeleteHandler(data);
+                break;
+            case NewMessage:
+                Message msg = new Gson().fromJson(data,Message.class);
+                if(selectedUser == msg.getSender())
+                    messsageReceiveHandler(msg);
+                break;
+            default:
+                break;
+        }
+
     }
 }

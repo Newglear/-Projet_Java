@@ -1,11 +1,13 @@
 package org.gui;
 
+import com.google.gson.Gson;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.SystemComponents;
+import org.database.Message;
 import org.database.User;
 import org.network.NetworkSender;
 import org.network.Types;
@@ -51,6 +53,7 @@ public class LoginController {
 
         sleep(1000);
         if(SystemComponents.UnicityCheck()) { // TODO : Tester le check unicity
+            SystemComponents.setUnicityCheck(false);
             SystemComponents.setCurrentNickname(nickname);
             Stage stage = (Stage) bt_login.getScene().getWindow();
             stage.setHeight(660);
@@ -59,8 +62,17 @@ public class LoginController {
             stage.setTitle("Chador");
             stage.centerOnScreen();
         }else{
+            SystemComponents.setUnicityCheck(false);
             warning_lb.setVisible(true);
         }
+    }
+
+    public void handleDatabaseHandler(Types.DataEvent event,String data) throws IOException {
+        switch(event){
+            default:
+                break;
+        }
+
     }
 
 
