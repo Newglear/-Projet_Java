@@ -1,13 +1,21 @@
 package org.database;
 
+import com.google.gson.Gson;
 import org.gui.App;
+import org.gui.LoginController;
+import org.network.Types;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Observable;
 
 
-public class DatabaseManager {
+public class DatabaseManager  {
     private static Connection con;
+
+    private static ArrayList<LoginController> observers;
+
     public DatabaseManager(){
         try {
             con = DriverManager.getConnection("jdbc:sqlite:ChaDBsqlite");
@@ -16,6 +24,19 @@ public class DatabaseManager {
         }
         System.out.println("Database Initialised");
     }
+
+    public static void subscribe (LoginController l){
+        observers.add(l);
+    }
+    public static void unsubscribe(Object l){
+        observers.remove(l);
+    }
+    public static  void invoke(Types.DataEvent ev, String data) throws IOException {
+        for(LoginController l: observers){
+            l.handleDatabaseHandler(ev,data);
+        }
+    }
+
 
     public static void Initialisation() throws SQLException {
         System.out.println("===== Initialisation =====");
@@ -91,6 +112,11 @@ public class DatabaseManager {
         p.setString(2, user.getAddr());
         p.setInt(3,user.getPort());
         p.execute();
+        try{
+            invoke(Types.DataEvent.NewUser,user.getPseudo());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -109,6 +135,11 @@ public class DatabaseManager {
         p.setString(3,msg.getMsg());
         p.setDate(4, new Date(System.currentTimeMillis()));
         p.execute();
+        try{
+            invoke(Types.DataEvent.NewMessage,new Gson().toJson(msg));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     public static void Disconnect_User(User u) throws  SQLException {
         String query = "UPDATE Users Set State = ? where ID = ?";
@@ -116,6 +147,11 @@ public class DatabaseManager {
         p.setBoolean(1,false);
         p.setInt(2,DatabaseManager.LoadUserID(u.getPseudo()));
         p.execute();
+        try{
+            invoke(Types.DataEvent.RemUser,u.getPseudo());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     public static ArrayList<Message> LoadHistory(User u) throws SQLException {
         ArrayList<Message> l = new ArrayList<>();

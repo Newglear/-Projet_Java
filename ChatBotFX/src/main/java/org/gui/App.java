@@ -67,8 +67,8 @@ public class App extends Application {
             DatabaseManager.Insert(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."));
             System.out.println(n);
         }
-
         launch();
+
     }
 
 }

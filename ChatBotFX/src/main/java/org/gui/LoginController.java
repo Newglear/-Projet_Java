@@ -68,11 +68,7 @@ public class LoginController {
     }
 
     public void handleDatabaseHandler(Types.DataEvent event,String data) throws IOException {
-        switch(event){
-            default:
-                break;
-        }
-
+        return;
     }
 
 
