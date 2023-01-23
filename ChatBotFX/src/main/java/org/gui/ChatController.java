@@ -51,6 +51,8 @@ public class ChatController {
 
     @FXML
     private ScrollPane scrollMessage;
+    @FXML
+    private TextField username_in;
 
     @FXML
     private void createUserBorderPane(String nickname, boolean isConnected) throws IOException {
@@ -112,7 +114,7 @@ public class ChatController {
     }
     public void userDeleteHandler(String name){
         return;
-    }
+    } // TODO : Remove a User from the scroll pane
     /*private void displayMessageReceived(String message) throws IOException {
         String inputText = messageInput.getText();
         if(inputText.length() > 0){
