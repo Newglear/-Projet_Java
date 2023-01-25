@@ -159,13 +159,14 @@ public class DatabaseManager  {
         }
     }
     public synchronized void Disconnect_User(User u) throws  SQLException {
+        System.out.println("==== User Disconnected ====");
         String query = "UPDATE Users Set State = ? where ID = ?";
         PreparedStatement p  = con.prepareStatement(query);
         p.setBoolean(1,false);
         p.setInt(2,LoadUserID(u.getPseudo()));
         p.execute();
         try{
-            invoke(Types.DataEvent.RemUser,u.getPseudo());
+                invoke(Types.DataEvent.RemUser,LoadUserID(u.getPseudo()).toString());
         }catch (IOException e){
             e.printStackTrace();
         }

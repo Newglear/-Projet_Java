@@ -119,7 +119,7 @@ public class NetworkReceiver extends Thread {
         System.out.println("Déconnexion de " + obj);
 
         try{
-            SystemComponents.getInstance().db.Remove(usr);
+            SystemComponents.getInstance().db.Disconnect_User(usr);
         }catch (SQLException s){
             System.out.println(s);
         }

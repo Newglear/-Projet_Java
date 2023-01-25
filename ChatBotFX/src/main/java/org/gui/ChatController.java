@@ -250,6 +250,7 @@ public class ChatController {
 
 ////////////////////////////////
 
+
     @FXML
     private void sendMessage() throws IOException, SQLException {
         if(activeBorderPane != null) {
@@ -286,6 +287,12 @@ public class ChatController {
         }
     }
 
+    public void deleteUser (String id){
+        BorderPane user = (BorderPane) App.scene. lookup("#"+id);
+        vboxUsersConv.getChildren().remove(user);
+        System.out.println("BorderPane deleted : "+id);
+    }
+
     private void changeNickname(String nickname) throws SocketException, InterruptedException, UnknownHostException {
         try {
             InetAddress Baddr = InetAddress.getByName("255.255.255.255");
@@ -320,6 +327,7 @@ public class ChatController {
     }
 
 
+
     public void handleDatabaseHandler(Types.DataEvent event, String data) throws IOException, SQLException {
 
         if(!SystemComponents.getInstance().getState().equals("chat"))
@@ -333,7 +341,7 @@ public class ChatController {
                 createUser(data,true);
                 break;
             case RemUser:
-                //userDeleteHandler(data); // TODO: Faire la fonction
+                deleteUser(data);
                 break;
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
