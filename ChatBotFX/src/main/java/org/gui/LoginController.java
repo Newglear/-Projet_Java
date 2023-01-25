@@ -10,6 +10,7 @@ import org.SystemComponents;
 import org.database.DatabaseManager;
 import org.database.Message;
 import org.database.User;
+import org.network.NetworkReceiver;
 import org.network.NetworkSender;
 import org.network.Types;
 
@@ -53,7 +54,7 @@ public class LoginController {
         NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos,SystemComponents.getInstance().getPort());
 
         sleep(1000);
-        if(!SystemComponents.getInstance().UnicityCheck()) { // TODO : Tester le check unicity
+        if(!SystemComponents.getInstance().UnicityCheck()) {
             SystemComponents.getInstance().setUnicityCheck(false);
             SystemComponents.getInstance().setCurrentNickname(nickname);
             Stage stage = (Stage) bt_login.getScene().getWindow();
@@ -65,17 +66,11 @@ public class LoginController {
                 System.out.println("JAI CHANGE DE CLASSE");
                 SystemComponents.getInstance().db.subscribe(App.fxmlLoader.getController());
             }
-            stage.centerOnScreen();
             SystemComponents.getInstance().setState("chat");
+            stage.centerOnScreen();
         }else{
             SystemComponents.getInstance().setUnicityCheck(false);
             warning_lb.setVisible(true);
         }
     }
-
-    public void handleDatabaseHandler(Types.DataEvent event,String data) throws IOException {
-        return;
-    }
-
-
 }

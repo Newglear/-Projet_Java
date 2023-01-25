@@ -58,7 +58,7 @@ public class NetworkReceiver extends Thread {
                 NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
                 User usr = gson.fromJson(msg.getObject(), User.class);
 
-                if(!usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp()) &&  !ThreadMode )
+                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp()) &&  ThreadMode )
                     continue;
                 switch (msg.getMode()){
                     case UserInfos:
@@ -70,6 +70,7 @@ public class NetworkReceiver extends Thread {
                     case Answer_Infos:
                         Add_User(msg.getObject());
                     case Error:
+                        System.out.println("Error Encountered");
                         SystemComponents.getInstance().setUnicityCheck(true);
                         break;
                     case Disconnect:
@@ -102,7 +103,7 @@ public class NetworkReceiver extends Thread {
     public void Receive_Nickname(String obj) throws SocketException {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
-        if(usr.getPseudo().equals(SystemComponents.getInstance().getCurrentNickname()) && (  ThreadMode||NicknameTestMode)){
+        if(usr.getPseudo().equals(SystemComponents.getInstance().getCurrentNickname()) && (ThreadMode||NicknameTestMode)){
             NetworkSender send  = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
         }else {
             try {
