@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e79e2fb6-1ac5-4cc5-8fa5-179aa85ef1c4" name="Changes" comment="Integration finale">
+    <list default="true" id="e79e2fb6-1ac5-4cc5-8fa5-179aa85ef1c4" name="Changes" comment="Integration finale V2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/MainSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MainSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MainSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +57,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn javafx:run" />
+    </option>
+  </component>
   <component name="RunManager" selected="Application.MainSender">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gui.App" />
@@ -171,7 +166,7 @@
       <workItem from="1674652571687" duration="3404000" />
       <workItem from="1674656702316" duration="1090000" />
       <workItem from="1674657829267" duration="195000" />
-      <workItem from="1674658052253" duration="4085000" />
+      <workItem from="1674658052253" duration="5185000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout d'observeur sur l'IHM et handler sur les INSERT et Remove">
       <created>1674503972567</created>
@@ -201,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674661301818</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Integration finale V2">
+      <created>1674662156543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674662156543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +214,7 @@
     <MESSAGE value="Ajustement" />
     <MESSAGE value="Besoin de faire des tests sur 2 pcs" />
     <MESSAGE value="Integration finale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration finale" />
+    <MESSAGE value="Integration finale V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration finale V2" />
   </component>
 </project>

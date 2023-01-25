@@ -290,6 +290,7 @@ public class ChatController {
     public void deleteUser (String id){
         BorderPane user = (BorderPane) App.scene. lookup("#"+id);
         vboxUsersConv.getChildren().remove(user);
+
         System.out.println("BorderPane deleted : "+id);
     }
 
