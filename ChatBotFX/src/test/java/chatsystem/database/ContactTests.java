@@ -1,7 +1,6 @@
 package chatsystem.database;
 
 import org.SystemComponents;
-import org.database.DatabaseManager;
 import org.database.User;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -33,60 +32,60 @@ public class ContactTests {
         for(String n:nicknames){
             contactList.add(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."+(num++)));
         }
-        DatabaseManager.Flush();
+        sys.db.Flush();
     }
     @Before
     public void Clean() throws SQLException {
-        DatabaseManager.Flush();
+        sys.db.Flush();
     }
     @Test
     public void Adding_Users() throws SQLException {
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            sys.db.Insert(u);
         }
-        System.out.println(DatabaseManager.LoadUsers());
-        assertEquals(contactList.size(),DatabaseManager.LoadUsers().toArray().length);
+        System.out.println(sys.db.LoadUsers());
+        assertEquals(contactList.size(),sys.db.LoadUsers().toArray().length);
     }
     @Test
     public void Removing_Users() throws SQLException {
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            sys.db.Insert(u);
         }
-        DatabaseManager.Remove(contactList.get(0));
-        DatabaseManager.Remove(contactList.get(contactList.size()-1));
-        System.out.println(DatabaseManager.LoadUsers());
-        assertEquals(contactList.size()-2,DatabaseManager.LoadUsers().toArray().length);
+        sys.db.Remove(contactList.get(0));
+        sys.db.Remove(contactList.get(contactList.size()-1));
+        System.out.println(sys.db.LoadUsers());
+        assertEquals(contactList.size()-2,sys.db.LoadUsers().toArray().length);
     }
 
     @Test
     public void Updating_Users() throws SQLException {
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            sys.db.Insert(u);
         }
-        DatabaseManager.Update(new User("Test",contactList.get(0).getPort(),"192.168.25.1"));
-        System.out.println(DatabaseManager.LoadUsers());
-        assertTrue(DatabaseManager.LoadUsers().contains("Test"));
+        sys.db.Update(new User("Test",contactList.get(0).getPort(),"192.168.25.1"));
+        System.out.println(sys.db.LoadUsers());
+        assertTrue(sys.db.LoadUsers().contains("Test"));
     }
 
     @Test
     public void Loading_Single_User() throws SQLException {
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            sys.db.Insert(u);
         }
-        assertEquals(DatabaseManager.LoadUser("Gwen").getPseudo(), contactList.get(0).getPseudo());
-        assertEquals(DatabaseManager.LoadUser("Gwen").getAddr(), contactList.get(0).getAddr());
-        assertEquals(DatabaseManager.LoadUser("Gwen").getPort(), contactList.get(0).getPort());
+        assertEquals(sys.db.LoadUser("Gwen").getPseudo(), contactList.get(0).getPseudo());
+        assertEquals(sys.db.LoadUser("Gwen").getAddr(), contactList.get(0).getAddr());
+        assertEquals(sys.db.LoadUser("Gwen").getPort(), contactList.get(0).getPort());
     }
     @Test
     public void Loading_Multiple_Users() throws SQLException {
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            sys.db.Insert(u);
         }
-        assertEquals(DatabaseManager.LoadUsers().size(),contactList.size());
+        assertEquals(sys.db.LoadUsers().size(),contactList.size());
     }
     @AfterClass
     public static void Clear() throws SQLException {
-        DatabaseManager.Flush();
+        sys.db.Flush();
     }
 
 }

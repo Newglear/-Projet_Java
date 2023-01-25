@@ -1,7 +1,6 @@
 package chatsystem.network;
 
 import org.SystemComponents;
-import org.database.DatabaseManager;
 import org.database.User;
 import org.junit.*;
 import org.network.NetworkReceiver;
@@ -30,7 +29,7 @@ public class UDPBroadcastTest {
     }
     @Before
     public void initUdp() throws SQLException {
-        DatabaseManager.Flush();
+        SystemComponents.getInstance().db.Flush();
         NetworkReceiver.Enable_ThreadMode_Mode(true);
         NetworkReceiver.resetContactCount();
         if(contactList != null)
@@ -48,7 +47,7 @@ public class UDPBroadcastTest {
             NetworkSender n = new NetworkSender(u, Types.UDPMode.UserInfos,1234);
             sleep(100);
         }
-        assertEquals(contactList.toArray().length,DatabaseManager.LoadUsers().toArray().length);
+        assertEquals(contactList.toArray().length,SystemComponents.getInstance().db.LoadUsers().toArray().length);
     }
 
     @Test
@@ -66,20 +65,20 @@ public class UDPBroadcastTest {
 
     @Test
     public void Nickname_Update() throws SocketException, SQLException {
-        DatabaseManager.Insert(new User("Tester",1234,"localhost"));
+        SystemComponents.getInstance().db.Insert(new User("Tester",1234,"localhost"));
         NetworkSender sender = new NetworkSender(new User("Modif",1234,"localhost"), Types.UDPMode.Nickname,1234);
         try {
             sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        assertTrue(DatabaseManager.LoadUsers().contains("Modif"));
+        assertTrue(SystemComponents.getInstance().db.LoadUsers().contains("Modif"));
     }
     /*
     @Test
     public void Unicity_Check() throws SocketException, SQLException {
         NetworkReceiver.Enable_ThreadMode_Mode(true);
-        DatabaseManager.Insert(new User("Tester",1234,"localhost"));
+        SystemComponents.getInstance().db.Insert(new User("Tester",1234,"localhost"));
         NetworkSender sender = new NetworkSender(new User("Tester",1234,"localhost"), Types.UDPMode.Nickname,1234);
         try {
             sleep(100);
@@ -89,7 +88,7 @@ public class UDPBroadcastTest {
     }*/
     @AfterClass
     public static void Clear() throws SQLException {
-        DatabaseManager.Flush();
+        SystemComponents.getInstance().db.Flush();
      }
 
 }

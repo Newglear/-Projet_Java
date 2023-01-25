@@ -6,13 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.SystemComponents;
-import org.database.DatabaseManager;
 import org.database.User;
-import org.network.Types;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
@@ -29,9 +26,7 @@ public class App extends Application {
     private int width = 468;
     private ChatController cc = new ChatController();
 
-    public static void handleDatabase(Types.DataEvent ev, String data){
 
-    }
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -40,6 +35,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("Login");
+        SystemComponents.getInstance().setState("Login");
         stage.show();
     }
 
@@ -56,15 +52,16 @@ public class App extends Application {
     public static void main(String[] args) throws IOException, SQLException {
         //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
-        DatabaseManager.Flush();
+
+        SystemComponents.getInstance().db.Flush();
         InetAddress addr = InetAddress.getByName("10.1.5.235");
         int port = 1234;
-        SystemComponents.setPort(port);
-        SystemComponents.setCurrentIp(addr.getHostName());
+        SystemComponents.getInstance().setPort(port);
+        SystemComponents.getInstance().setCurrentIp(addr.getHostName());
 
         List<String> nicknames = Arrays.asList("Gwen","Cador","Evan","Joel","Kiki","G\nen","Wesh","???.?????????????????????    ???????");
         for(String n:nicknames){
-            DatabaseManager.Insert(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."));
+            SystemComponents.getInstance().db.Insert(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."));
             System.out.println(n);
         }
         launch();

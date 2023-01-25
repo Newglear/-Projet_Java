@@ -1,7 +1,9 @@
 package org.database;
 
 import com.google.gson.Gson;
+import javafx.application.Platform;
 import org.gui.App;
+import org.gui.ChatController;
 import org.gui.LoginController;
 import org.network.Types;
 
@@ -12,33 +14,45 @@ import java.util.Observable;
 
 
 public class DatabaseManager  {
-    private static Connection con;
+    private Connection con;
 
-    private static ArrayList<LoginController> observers;
+    private ArrayList<ChatController> observers;
 
     public DatabaseManager(){
+        observers = new ArrayList<>();
         try {
             con = DriverManager.getConnection("jdbc:sqlite:ChaDBsqlite");
+            System.out.println("CON == "+con);
         }catch (SQLException s) {
             System.out.println(s);
         }
         System.out.println("Database Initialised");
     }
 
-    public static void subscribe (LoginController l){
-        observers.add(l);
+    public void subscribe (ChatController c){
+        observers.add(c);
+        System.out.println("==== ADDED NEW SUBSCRIBER ====");
     }
-    public static void unsubscribe(Object l){
-        observers.remove(l);
+    public void unsubscribe(ChatController c){
+        observers.remove(c);
     }
-    public static  void invoke(Types.DataEvent ev, String data) throws IOException {
-        for(LoginController l: observers){
-            l.handleDatabaseHandler(ev,data);
+    public void invoke(Types.DataEvent ev, String data) throws IOException {
+        for(ChatController c: observers){
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        c.handleDatabaseHandler(ev,data);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         }
     }
 
 
-    public static void Initialisation() throws SQLException {
+    public synchronized  void Initialisation() throws SQLException {
         System.out.println("===== Initialisation =====");
         String query = "create table if not exists main.History " +
                 "( " +
@@ -66,21 +80,21 @@ public class DatabaseManager  {
         System.out.println("===== User Table Initialized =====");
         System.out.println("===== Done =====");
     }
-    public static  void Flush() throws SQLException {
+    public synchronized void Flush() throws SQLException {
         Flush_History();
         Flush_Users();
     }
-    public static void Flush_Users() throws SQLException {
+    public synchronized void Flush_Users() throws SQLException {
         String query = "Delete from Users";
         PreparedStatement p = con.prepareStatement(query);
         p.execute();
     }
-    public static void Flush_History() throws SQLException {
+    public synchronized  void Flush_History() throws SQLException {
         String query = "Delete from History";
         PreparedStatement p = con.prepareStatement(query);
         p.execute();
     }
-    public static ArrayList<String> LoadUsers() throws SQLException {
+    public ArrayList<String> LoadUsers() throws SQLException {
         ArrayList<String> l = new ArrayList<>();
         String query = "Select * from Users";
         PreparedStatement p = con.prepareStatement(query);
@@ -92,20 +106,20 @@ public class DatabaseManager  {
     }
 
 
-    public static void Remove(User user) throws SQLException {
+    public synchronized void Remove(User user) throws SQLException {
         String query = "DELETE FROM Users where Nickname = ?";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1,user.getPseudo());
         p.execute();
     }
-    public static void Update(User user) throws SQLException {
+    public synchronized void Update(User user) throws SQLException {
         String query = "UPDATE Users SET Nickname = ? WHERE Ip = ?";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1,user.getPseudo());
         p.setString(2,user.getAddr());
         p.execute();
     }
-    public static void Insert(User user) throws SQLException {
+    public synchronized void Insert(User user) throws SQLException {
         String query = "INSERT INTO Users(Nickname, Ip, Port) values (?,?,?)";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1,user.getPseudo());
@@ -120,14 +134,15 @@ public class DatabaseManager  {
 
     }
 
-    public static Integer LoadUserID(String name) throws SQLException {
+    public synchronized Integer LoadUserID(String name) throws SQLException {
         String query = "SELECT ID from Users where Nickname = ? ";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1, name);
         ResultSet r = p.executeQuery();
         return r.getInt("ID");
     }
-    public static void Insert(Message msg) throws SQLException {
+    public synchronized void Insert(Message msg) throws SQLException {
+        System.out.println("Insertion de message entrant");
         String query = "INSERT INTO History(UserID,Sent, Content,Date) values (?,?,?,?)";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1, LoadUserID(msg.getSender()).toString());
@@ -141,11 +156,11 @@ public class DatabaseManager  {
             e.printStackTrace();
         }
     }
-    public static void Disconnect_User(User u) throws  SQLException {
+    public synchronized void Disconnect_User(User u) throws  SQLException {
         String query = "UPDATE Users Set State = ? where ID = ?";
         PreparedStatement p  = con.prepareStatement(query);
         p.setBoolean(1,false);
-        p.setInt(2,DatabaseManager.LoadUserID(u.getPseudo()));
+        p.setInt(2,LoadUserID(u.getPseudo()));
         p.execute();
         try{
             invoke(Types.DataEvent.RemUser,u.getPseudo());
@@ -153,7 +168,7 @@ public class DatabaseManager  {
             e.printStackTrace();
         }
     }
-    public static ArrayList<Message> LoadHistory(User u) throws SQLException {
+    public synchronized ArrayList<Message> LoadHistory(User u) throws SQLException {
         ArrayList<Message> l = new ArrayList<>();
         String query = "Select Nickname,Content,Sent,History.Date from History inner join Users on Users.ID = History.UserID where UserID = ?";
         PreparedStatement p = con.prepareStatement(query);
@@ -168,14 +183,14 @@ public class DatabaseManager  {
         }
         return l;
     }
-    public static User LoadUser(String name) throws SQLException {
+    public synchronized User LoadUser(String name) throws SQLException {
         String query = "Select * from Users where Nickname=?";
         PreparedStatement p = con.prepareStatement(query);
         p.setString(1,name);
         ResultSet rs = p.executeQuery();
         return new User(rs.getString("Nickname"), rs.getInt("Port"), rs.getString("Ip"));
     }
-    public static void Disconnect(){
+    public synchronized void Disconnect(){
         try {
             con.close();
         } catch (SQLException s ){

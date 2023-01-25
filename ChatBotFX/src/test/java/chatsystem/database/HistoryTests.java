@@ -1,7 +1,6 @@
 package chatsystem.database;
 
 import org.SystemComponents;
-import org.database.DatabaseManager;
 import org.database.Message;
 import org.database.User;
 import org.junit.AfterClass;
@@ -40,30 +39,30 @@ public class HistoryTests {
         messageList.add(new Message(contactList.get(1).getPseudo(),true,"szerguihrigbs"));
         messageList.add(new Message(contactList.get(0).getPseudo(),false,"vszjbhuzsbvkjhdfgbsrg"));
         messageList.add(new Message(contactList.get(1).getPseudo(),false,"dgfbjhbnsduibsdfuihjsbrgf"));
-        DatabaseManager.Flush();
+        SystemComponents.getInstance().db.Flush();
     }
     @Before
     public void Clean() throws SQLException {
-        DatabaseManager.Flush();
+        SystemComponents.getInstance().db.Flush();
         for(User u: contactList){
-            DatabaseManager.Insert(u);
+            SystemComponents.getInstance().db.Insert(u);
         }
     }
     @Test
    public void Add_Single_Message() throws SQLException {
-        DatabaseManager.Insert(new Message(contactList.get(0).getPseudo(),false,"Petit message de test n°1",new Date(System.currentTimeMillis())));
-        assertEquals(new Message(contactList.get(0).getPseudo(),false,"Petit message de test n°1",new Date(System.currentTimeMillis())).getMsg() ,DatabaseManager.LoadHistory(contactList.get(0)).get(0).getMsg());
+        SystemComponents.getInstance().db.Insert(new Message(contactList.get(0).getPseudo(),false,"Petit message de test n°1",new Date(System.currentTimeMillis())));
+        assertEquals(new Message(contactList.get(0).getPseudo(),false,"Petit message de test n°1",new Date(System.currentTimeMillis())).getMsg() ,SystemComponents.getInstance().db.LoadHistory(contactList.get(0)).get(0).getMsg());
     }
     @Test
     public void Add_Multiple_Messages() throws SQLException {
         for(Message m: messageList){
-            DatabaseManager.Insert(m);
+            SystemComponents.getInstance().db.Insert(m);
         }
-        assertEquals(2, DatabaseManager.LoadHistory(contactList.get(0)).size());
+        assertEquals(2, SystemComponents.getInstance().db.LoadHistory(contactList.get(0)).size());
     }
     @AfterClass
     public static void Clear() throws SQLException {
-        DatabaseManager.Flush();
+        SystemComponents.getInstance().db.Flush();
     }
 
 }

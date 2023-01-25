@@ -18,7 +18,6 @@ import javafx.scene.text.Font;
 import org.SystemComponents;
 import org.ThreadManager;
 import org.conv.SenderThread;
-import org.database.DatabaseManager;
 import org.database.Message;
 import org.database.User;
 import org.network.NetworkSender;
@@ -90,6 +89,7 @@ public class ChatController {
 
         //Add BorderPane to Vbox
         vboxUsersConv.getChildren().add(bPaneUsers);
+
     }
 
     @FXML
@@ -100,9 +100,9 @@ public class ChatController {
             messageInput.clear();
             SenderThread th= ThreadManager.getThread(selectedUser);
             if(th == null ){
-                ThreadManager.createSenderThread(InetAddress.getByName(DatabaseManager.LoadUser(selectedUser).getAddr()),DatabaseManager.LoadUser(selectedUser).getPort());
+                ThreadManager.createSenderThread(InetAddress.getByName(SystemComponents.getInstance().db.LoadUser(selectedUser).getAddr()),SystemComponents.getInstance().db.LoadUser(selectedUser).getPort());
             }
-            th.Send(new Message(SystemComponents.getCurrentNickname(),true,inputText));
+            th.Send(new Message(SystemComponents.getInstance().getCurrentNickname(),true,inputText));
         }
     }
 
@@ -130,25 +130,25 @@ public class ChatController {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        User u = new User(nickname,SystemComponents.getPort(),SystemComponents.getCurrentIp());
-        NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos,SystemComponents.getPort());
+        User u = new User(nickname,SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp());
+        NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos,SystemComponents.getInstance().getPort());
 
         sleep(1000);
-        if(SystemComponents.UnicityCheck()){
+        if(SystemComponents.getInstance().UnicityCheck()){
             // Change the nickname in the DB and display
-            SystemComponents.setUnicityCheck(false);
-            SystemComponents.setCurrentNickname(nickname);
+            SystemComponents.getInstance().setUnicityCheck(false);
+            SystemComponents.getInstance().setCurrentNickname(nickname);
         }else{
-            SystemComponents.setUnicityCheck(false);
+            SystemComponents.getInstance().setUnicityCheck(false);
             // Warning
         }
     }
 
     @FXML
     public void displayContacts() throws SQLException, IOException {
-        for(String s: DatabaseManager.LoadUsers()){
+        for(String s: SystemComponents.getInstance().db.LoadUsers()){
             System.out.println(s);
-            System.out.println(DatabaseManager.LoadUsers());
+            System.out.println(SystemComponents.getInstance().db.LoadUsers());
             createUserBorderPane(s,true);
         }
     }
@@ -217,6 +217,13 @@ public class ChatController {
     }
 
     public void handleDatabaseHandler(Types.DataEvent event,String data) throws IOException {
+
+        if(!SystemComponents.getInstance().getState().equals("chat"))
+        {
+            System.out.println("Mauvais Contexte");
+            return;
+        }
+        System.out.printf("===== Gestion d'event"+event+"=====");
         switch(event){
             case NewUser:
                 userReceiveHandler(data);

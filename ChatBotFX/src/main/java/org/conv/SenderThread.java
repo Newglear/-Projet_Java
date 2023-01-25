@@ -1,8 +1,8 @@
 package org.conv;
 
 import com.google.gson.Gson;
+import org.SystemComponents;
 import org.database.Message;
-import org.database.DatabaseManager;
 
 import java.io.*;
 import java.net.*;
@@ -47,7 +47,7 @@ public class SenderThread extends Thread {
             msg.setSent(true);
             outChannel = new PrintWriter(convSocket.getOutputStream(), true);
             outChannel.println(gson.toJson(msg));
-            DatabaseManager.Insert(msg);
+            SystemComponents.getInstance().db.Insert(msg);
         } catch (SQLException | IOException s) {
             s.printStackTrace();
         }

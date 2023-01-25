@@ -1,6 +1,7 @@
 package org.conv;
 
 import com.google.gson.Gson;
+import org.SystemComponents;
 import org.database.Message;
 import org.database.DatabaseManager;
 
@@ -43,7 +44,7 @@ public class ReceiverThread extends Thread {
                 System.out.println(msg);
                 System.out.println("==================");
                 try{
-                    DatabaseManager.Insert(msg);
+                    SystemComponents.getInstance().db.Insert(msg);
                 }catch (SQLException s){
                     System.out.println(s);
                 }

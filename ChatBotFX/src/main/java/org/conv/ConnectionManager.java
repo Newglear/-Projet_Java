@@ -33,8 +33,8 @@ public class ConnectionManager extends Thread {
 
     public void run() {
         try {
-            this.serverSocketManager = new ServerSocket(1234);
-            //System.out.println("public port : "+this.serverSocketManager.getLocalPort());
+            this.serverSocketManager = new ServerSocket(1235);
+            System.out.println("public port : "+this.serverSocketManager.getLocalPort());
 
             Socket socketManager;
             ServerSocket receiverSocket;
