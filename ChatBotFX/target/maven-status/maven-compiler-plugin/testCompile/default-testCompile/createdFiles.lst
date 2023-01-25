@@ -1,0 +1,4 @@
+chatsystem/conversation/TCPConversationTest.class
+chatsystem/database/HistoryTests.class
+chatsystem/database/ContactTests.class
+chatsystem/network/UDPBroadcastTest.class
