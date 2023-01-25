@@ -26,7 +26,7 @@ public class Message {
         this.msg = m;
     }
     public boolean isSent() {
-        return Sent;
+        return this.Sent;
     }
 
     public void setSent(boolean Sent) {
@@ -64,7 +64,7 @@ public class Message {
     @Override
     public String toString() {
         return "Sender: "+ this.Sender +
-                "\nReceiver: "+ this.Sent +
+                "\nIs Sent? : "+ this.Sent +
                 "\nContent: "+ this.msg +
                 "\nDate: "+ this.date;
     }

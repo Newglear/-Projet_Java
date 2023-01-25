@@ -120,19 +120,25 @@ public class DatabaseManager {
         PreparedStatement p = con.prepareStatement(query);
         p.setInt(1,LoadUserID(u.getPseudo()));
         ResultSet rs = p.executeQuery();
+        System.out.println(rs);
+        /*System.out.println("........"+ u);
+        System.out.println("?????"+u.getPseudo());
+        System.out.println("AAAAAAAA: "+LoadUserID(u.getPseudo()));*/
         while (rs.next()){
-            Message m = new Message(rs.getString("Nickname"),rs.getBoolean("Sent"),rs.getString("Content"),rs.getDate("Date"));
+            System.out.println("Bool : "+ rs.getString("Sent"));
+            Message m = new Message(rs.getString("Nickname"),rs.getString("Sent").equals("true"),rs.getString("Content"),rs.getDate("Date"));
+            //System.out.println(rs.getString("Nickname"));
             l.add(m);
 
-            System.out.println(m);
-            System.out.println("--------------------");
+            //System.out.println(m);
+            //System.out.println("--------------------");
         }
         return l;
     }
-    public static User LoadUser(String name) throws SQLException {
-        String query = "Select * from Users where Nickname=?";
+    public static User LoadUser(int id) throws SQLException {
+        String query = "Select * from Users where ID=?";
         PreparedStatement p = con.prepareStatement(query);
-        p.setString(1,name);
+        p.setInt(1,id);
         ResultSet rs = p.executeQuery();
         return new User(rs.getString("Nickname"), rs.getInt("Port"), rs.getString("Ip"));
     }
