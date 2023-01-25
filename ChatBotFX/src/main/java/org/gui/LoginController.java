@@ -16,6 +16,7 @@ import org.network.Types;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import static java.lang.Thread.sleep;
@@ -47,29 +48,31 @@ public class LoginController {
 
 
     @FXML
-    private void userLogin() throws IOException, InterruptedException {
+    private void userLogin() throws IOException, InterruptedException, SQLException {
         String nickname = username_in.getText();
-        InetAddress Baddr = InetAddress.getByName("255.255.255.255");
-        User u = new User(nickname,SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp());
-        NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos,SystemComponents.getInstance().getPort());
+        if(nickname.length() > 0) {
+            InetAddress Baddr = InetAddress.getByName("255.255.255.255");
+            User u = new User(nickname, SystemComponents.getInstance().getPort(), SystemComponents.getInstance().getCurrentIp());
+            NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos, SystemComponents.getInstance().getPort());
 
-        sleep(1000);
-        if(!SystemComponents.getInstance().UnicityCheck()) {
-            SystemComponents.getInstance().setUnicityCheck(false);
-            SystemComponents.getInstance().setCurrentNickname(nickname);
-            Stage stage = (Stage) bt_login.getScene().getWindow();
-            stage.setHeight(660);
-            stage.setWidth(980);
-            App.setRoot("chat");
-            stage.setTitle("Chador");
-            if(App.fxmlLoader.getController().getClass() == ChatController.class){
-                System.out.println("JAI CHANGE DE CLASSE");
-                SystemComponents.getInstance().db.subscribe(App.fxmlLoader.getController());
+            sleep(1000);
+            if (!SystemComponents.getInstance().UnicityCheck()) {
+                SystemComponents.getInstance().setCurrentNickname(nickname);
+
+                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
+                ChatController cc = (ChatController) App.fxmlloader.getController();
+                cc.updateUsername(nickname);
+                cc.displayContacts();
+                if(App.fxmlloader.getController().getClass() == ChatController.class){
+                    SystemComponents.getInstance().db.subscribe(App.fxmlloader.getController());
+                }
+                SystemComponents.getInstance().setState("chat");
+            } else {
+                warning_lb.setText("Warning: this username is already used");
+                warning_lb.setVisible(true);
             }
-            SystemComponents.getInstance().setState("chat");
-            stage.centerOnScreen();
         }else{
-            SystemComponents.getInstance().setUnicityCheck(false);
+            warning_lb.setText("Warning: at least one character is needed");
             warning_lb.setVisible(true);
         }
     }

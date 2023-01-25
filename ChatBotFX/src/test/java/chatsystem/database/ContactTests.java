@@ -72,9 +72,9 @@ public class ContactTests {
         for(User u: contactList){
             sys.db.Insert(u);
         }
-        assertEquals(sys.db.LoadUser("Gwen").getPseudo(), contactList.get(0).getPseudo());
-        assertEquals(sys.db.LoadUser("Gwen").getAddr(), contactList.get(0).getAddr());
-        assertEquals(sys.db.LoadUser("Gwen").getPort(), contactList.get(0).getPort());
+        assertEquals(sys.db.LoadUser(SystemComponents.getInstance().db.LoadUserID("Gwen")).getPseudo(), contactList.get(0).getPseudo());
+        assertEquals(sys.db.LoadUser(SystemComponents.getInstance().db.LoadUserID("Gwen")).getAddr(), contactList.get(0).getAddr());
+        assertEquals(sys.db.LoadUser(SystemComponents.getInstance().db.LoadUserID("Gwen")).getPort(), contactList.get(0).getPort());
     }
     @Test
     public void Loading_Multiple_Users() throws SQLException {
