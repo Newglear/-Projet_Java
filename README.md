@@ -13,3 +13,8 @@ TODO :
 - Border pane null ? 
 - Changement de pseudo dans chat ? **A tester plus en profondeur**
 - Broadcast cassé 
+
+
+
+- Nouveau Bug : 
+    Apres avoir changé de pseudo on ne peut plus parler avec la personne

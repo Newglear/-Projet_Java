@@ -324,9 +324,11 @@ public class ChatController {
                 updateUsername(pseudo);
                 displayContacts();
                 labelWarningPseudo.setVisible(false);
+                SystemComponents.getInstance().setUnicityCheck(false);
             }else{
                 labelWarningPseudo.setText("Warning: this username is already used");
                 labelWarningPseudo.setVisible(true);
+                SystemComponents.getInstance().setUnicityCheck(false);
             }
         }else {
             labelWarningPseudo.setText("Warning: Must not be empty");
