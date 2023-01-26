@@ -120,6 +120,12 @@ public class DatabaseManager  {
         p.setString(1,user.getPseudo());
         p.setString(2,user.getAddr());
         p.execute();
+        try{
+            invoke(Types.DataEvent.UpdateUser,user.getPseudo());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
     public synchronized void Insert(User user) throws SQLException {
         int Uid = LoadUserID(user.getPseudo());
@@ -132,11 +138,9 @@ public class DatabaseManager  {
             p.setBoolean(4,true);
             p.execute();
         }
-        System.out.println("BLBLBLBLBLBBLLBBLBL");
         try{
-            System.out.println("NYAAAAAA");
             invoke(Types.DataEvent.NewUser,user.getPseudo());
-            System.out.println("NYAAAAAA22222222");
+
         }catch (IOException e){
             e.printStackTrace();
         }

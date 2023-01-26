@@ -345,6 +345,9 @@ public class ChatController {
                 deleteUser(data);
                 createUser(data,false);
                 break;
+            case UpdateUser:
+                displayContacts();
+                break;
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
                 if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && activeBorderPane != null)
