@@ -265,8 +265,7 @@ public class ChatController {
                     ThreadManager.createSenderThread(InetAddress.getByName(SystemComponents.getInstance().db.LoadUser(Uid).getAddr()),SystemComponents.getInstance().db.LoadUser(Uid).getPort()+1);
                     th = ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 }
-                sleep(1000);
-                th.Send(new Message(SystemComponents.getInstance().getCurrentNickname(),true,inputText));
+                th.Send(new Message(SystemComponents.getInstance().db.LoadUser(Uid).getPseudo(),true,inputText));
 
             }
             createMessage(inputText, true);
@@ -348,7 +347,7 @@ public class ChatController {
                 break;
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
-                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()))
+                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && activeBorderPane != null)
                     createMessage(msg.getMsg(),msg.isSent());
                 break;
             default:

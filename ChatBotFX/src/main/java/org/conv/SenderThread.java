@@ -44,12 +44,18 @@ public class SenderThread extends Thread {
 
     public void Send(Message msg){
         try {
+            if(convSocket == null){
+                sleep(1000);
+            }
             msg.setSent(true);
             outChannel = new PrintWriter(convSocket.getOutputStream(), true);
-            outChannel.println(gson.toJson(msg));
+            Message m = new Message(SystemComponents.getInstance().getCurrentNickname(),msg.isSent(),msg.getMsg());
+            outChannel.println(gson.toJson(m));
             SystemComponents.getInstance().db.Insert(msg);
         } catch (SQLException | IOException s) {
             s.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 
