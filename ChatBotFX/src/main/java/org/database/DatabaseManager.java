@@ -148,6 +148,8 @@ public class DatabaseManager  {
             p.setInt(3,user.getPort());
             p.setBoolean(4,true);
             p.execute();
+        }else{
+            Connect_User(user);
         }
         try{
             invoke(Types.DataEvent.NewUser,user.getPseudo());
@@ -158,6 +160,7 @@ public class DatabaseManager  {
 
     }
 
+
     public synchronized Integer LoadUserID(String name) throws SQLException {
         String query = "SELECT ID from Users where Nickname = ? ";
         PreparedStatement p = con.prepareStatement(query);
@@ -165,6 +168,7 @@ public class DatabaseManager  {
         ResultSet r = p.executeQuery();
         return r.getInt("ID");
     }
+
     public synchronized void Insert(Message msg) throws SQLException {
         System.out.println("Insertion de message entrant");
         String query = "INSERT INTO History(UserID,Sent, Content,Date) values (?,?,?,?)";
@@ -176,6 +180,20 @@ public class DatabaseManager  {
         p.execute();
         try{
             invoke(Types.DataEvent.NewMessage,new Gson().toJson(msg));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public synchronized void Connect_User(User u) throws  SQLException {
+        System.out.println("==== User Disconnected ====");
+        String query = "UPDATE Users Set State = ? where ID = ?";
+        PreparedStatement p  = con.prepareStatement(query);
+        p.setBoolean(1,true);
+        p.setInt(2,LoadUserID(u.getPseudo()));
+        p.execute();
+        try{
+            invoke(Types.DataEvent.RemUser,LoadUserID(u.getPseudo()).toString());
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -216,6 +234,12 @@ public class DatabaseManager  {
         p.setInt(1,id);
         ResultSet rs = p.executeQuery();
         return new User(rs.getString("Nickname"), rs.getInt("Port"), rs.getString("Ip"));
+    }
+    public synchronized void DisconnectAll() throws SQLException {
+        System.out.println("==== Users Discconnected ====");
+        String query = "UPDATE Users Set State = false";
+        PreparedStatement p  = con.prepareStatement(query);
+        p.execute();
     }
     public synchronized void Disconnect(){
         try {

@@ -17,4 +17,4 @@ TODO :
 
 
 - Nouveau Bug : 
-    Apres avoir changé de pseudo on ne peut plus parler avec la personne
+    Apres avoir changé de pseudo on ne peut plus parler avec la personne*Done*

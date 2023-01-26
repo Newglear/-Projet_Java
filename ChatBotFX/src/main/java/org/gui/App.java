@@ -6,11 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.SystemComponents;
+import org.database.DatabaseManager;
 import org.database.Message;
 import org.database.User;
+import org.network.NetworkSender;
+import org.network.Types;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,15 +25,12 @@ import java.util.List;
  * JavaFX App
  */
 public class App extends Application {
-    public static Scene scene;
-    public static FXMLLoader fxmlloader;
-    private ChatController cc = new ChatController();
 
     @Override
     public void start(Stage stage) throws IOException {
-
-        //scene = new Scene(loadFXML("login"), 468, 455);
-        scene = new Scene(loadFXML("login"),980, 630);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("Login");
@@ -37,25 +38,24 @@ public class App extends Application {
         //TODO: add IP address to label
     }
 
-    public static void setWindow(String fxml, Stage stage, String title, int width, int height) throws IOException {
-        stage.setTitle(title);
-        scene = new Scene(App.loadFXML(fxml), width, height);
-        stage.setScene(scene);
-        stage.show();
-        stage.centerOnScreen();
+    @Override
+    public void stop() throws SQLException, SocketException, UnknownHostException {
+        //TODO: fermer les threads
+        SystemComponents sys = SystemComponents.getInstance();
+        NetworkSender send = new NetworkSender(new User(sys.getCurrentNickname(), sys.getPort(), sys.getCurrentNickname()), Types.UDPMode.Disconnect,1234);
+        SystemComponents.getInstance().db.DisconnectAll();
+        System.out.println("L'application s'est arrêtée");
+        System.exit(0);
     }
-
-    public static Parent loadFXML(String fxml) throws IOException {
-        fxmlloader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlloader.load();
-    }
-
 
     public static void main(String[] args) throws IOException, SQLException {
+        //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
+        //sys.db.Flush();
         int port = 1234;
         sys.setPort(port);
         sys.setCurrentIp(SystemComponents.getIPv4().getHostName());
+
         launch();
     }
 

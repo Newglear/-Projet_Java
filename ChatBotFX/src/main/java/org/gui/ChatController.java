@@ -93,7 +93,7 @@ public class ChatController {
         if(activeBorderPane != null){
             activeBorderPane.setStyle("-fx-background-color:#dfdfdf; -fx-background-radius:10");
         }
-        activeBorderPane = (BorderPane) e.getTarget();
+        activeBorderPane = (BorderPane) e.getSource();
         activeBorderPane.setStyle("-fx-border-color:#ff5555; -fx-border-radius:10");
     }
 
@@ -259,6 +259,10 @@ public class ChatController {
                 String selectedUser = activeBorderPane.getId();
                 int Uid = Integer.parseInt(selectedUser);
                 DatabaseManager db  =SystemComponents.getInstance().db;
+                if(!db.LoadUsers().contains(db.LoadUser(Uid))){
+                    System.out.println("Utilisateur Déconnecté");
+                    return;
+                }
 
                 SenderThread th= ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 if(th == null ){
@@ -294,12 +298,12 @@ public class ChatController {
         }
     }
 
-    public void deleteUser (String id){
-        BorderPane user = (BorderPane) App.scene. lookup("#"+id);
+    /*public void deleteUser (String id){
+        BorderPane user = (BorderPane) App.scene.lookup("#"+id);
         vboxUsersConv.getChildren().remove(user);
 
         System.out.println("BorderPane deleted : "+id);
-    }
+    }*/
 
     private void changeNickname(String nickname) throws SocketException, InterruptedException, UnknownHostException {
         try {

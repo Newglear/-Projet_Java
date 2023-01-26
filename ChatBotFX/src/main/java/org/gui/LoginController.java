@@ -30,6 +30,7 @@ public class LoginController {
 
     public ArrayList<String> usernames = new ArrayList<>(Arrays.asList("Paul","Jean"));
     public String userNickname;
+    public String IpAddress;
 
     public boolean checkUnicity(String  username){
         boolean isFind = true;
@@ -63,21 +64,7 @@ public class LoginController {
             sleep(1500);
             if (!SystemComponents.getInstance().UnicityCheck()) {
                 SystemComponents.getInstance().setCurrentNickname(nickname);
-
-                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
-                /*Parent p = FXMLLoader.load(getClass().getResource("chat.fxml"));
-                Scene sc = new Scene(p);
-                Stage st = (Stage) ((Node) e.getSource()).getScene().getWindow();
-                st.setScene(sc);
-                st.centerOnScreen();*/
-
-                ChatController cc = (ChatController) App.fxmlloader.getController();
-                if(App.fxmlloader.getController().getClass() == ChatController.class){
-                    SystemComponents.getInstance().db.subscribe(App.fxmlloader.getController());
-                }
-                SystemComponents.getInstance().setState("chat");
-                cc.updateUsername(nickname);
-                cc.displayContacts();
+                switchLoginScene(e, nickname);
 
             } else {
                 warning_lb.setText("Warning: this username is already used");
@@ -88,5 +75,29 @@ public class LoginController {
             warning_lb.setText("Warning: at least one character is needed");
             warning_lb.setVisible(true);
         }
+    }
+
+    private void switchLoginScene(ActionEvent e, String nickname) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("chat.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Chador");
+        stage.centerOnScreen();
+
+        ChatController cc = (ChatController) loader.getController();
+        //Note: si tu veux un chatcontroller dans une autre classe tu écris la ligne en  dessous pour le récupérer
+        //ChatController cc = (ChatController) (new FXMLLoader(getClass().getResource("chat.fxml"))).getController();
+        System.out.println(cc);
+        if(cc.getClass() == ChatController.class){
+            SystemComponents.getInstance().db.subscribe(cc);
+        }
+        SystemComponents.getInstance().setState("chat");
+        cc.updateUsername(nickname);
+        cc.displayContacts();
+    }
+    public void setIpAddress(String addr){
+        IpAddress = addr;
     }
 }
