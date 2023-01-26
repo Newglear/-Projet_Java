@@ -61,15 +61,11 @@ public class NetworkReceiver extends Thread {
                 NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
                 User usr = gson.fromJson(msg.getObject(), User.class);
                 System.out.println(usr);
-                if(ThreadMode){
+
+                if(ThreadMode && usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp())) {
                     continue;
                 }
-                if(usr.getAddr() == null ){
-                    continue;
-                }
-                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp())) {
-                    continue;
-                }
+                System.out.println("Petit message de test");
                 switch (msg.getMode()){
                     case UserInfos:
                         Receive_Infos(msg.getObject());

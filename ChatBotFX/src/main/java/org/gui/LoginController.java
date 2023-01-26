@@ -82,9 +82,9 @@ public class LoginController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setResizable(true);
         stage.setTitle("Chador");
         stage.setScene(scene);
+        stage.setResizable(true);
         stage.setWidth(980);
         stage.setHeight(660);
         stage.sizeToScene();
