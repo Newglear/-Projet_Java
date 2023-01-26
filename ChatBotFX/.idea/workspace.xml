@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Correction de bugs : Envoi de message mal taggués dans la DB">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Test d'envoie des user infos">
+      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +48,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Flush">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gui.App" />
       <module name="ChatBotFX" />
@@ -82,8 +77,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.Flush" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674735284884</updated>
-      <workItem from="1674735288337" duration="4840000" />
+      <workItem from="1674735288337" duration="5124000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -132,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674739434697</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test d'envoie des user infos">
+      <created>1674740154729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674740154729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +145,7 @@
     <MESSAGE value="Ajout d'utilisateur unique en pseudo dans la DB" />
     <MESSAGE value="Correction de bugs : Users et envoi de message" />
     <MESSAGE value="Correction de bugs : Envoi de message mal taggués dans la DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction de bugs : Envoi de message mal taggués dans la DB" />
+    <MESSAGE value="Test d'envoie des user infos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test d'envoie des user infos" />
   </component>
 </project>
