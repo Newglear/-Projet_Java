@@ -333,6 +333,7 @@ public class ChatController {
             }else{
                 labelWarningPseudo.setText("Warning: this username is already used");
                 labelWarningPseudo.setVisible(true);
+                SystemComponents.getInstance().setCurrentNickname(pseudo);
                 SystemComponents.getInstance().setUnicityCheck(false);
             }
         }else {
