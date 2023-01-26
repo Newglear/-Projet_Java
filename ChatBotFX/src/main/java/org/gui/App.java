@@ -55,10 +55,9 @@ public class App extends Application {
         //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
         //SystemComponents.getInstance().db.Flush();
-        InetAddress addr = InetAddress.getByName("192.168.1.96");
         int port = 1234;
         sys.setPort(port);
-        sys.setCurrentIp(addr.getHostName());
+        sys.setCurrentIp(SystemComponents.getIPv4().getHostName());
 
         /*List<String> nicknames = Arrays.asList("Gwen","Cador","Evan","Joel","Kiki");
         for(String n:nicknames){

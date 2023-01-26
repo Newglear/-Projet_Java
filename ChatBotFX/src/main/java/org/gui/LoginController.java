@@ -51,7 +51,7 @@ public class LoginController {
     private void userLogin() throws IOException, InterruptedException, SQLException {
         String nickname = username_in.getText();
         if(nickname.length() > 0) {
-            InetAddress Baddr = InetAddress.getByName("192.168.1.255");
+            InetAddress Baddr = SystemComponents.toBroadcast(SystemComponents.getIPv4());
             User u = new User(nickname, SystemComponents.getInstance().getPort(), SystemComponents.getInstance().getCurrentIp());
             NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos, SystemComponents.getInstance().getPort());
 
