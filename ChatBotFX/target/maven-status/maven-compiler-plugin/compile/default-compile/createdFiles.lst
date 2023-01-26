@@ -11,7 +11,6 @@ org/MainSender.class
 org/network/NetworkSender$1.class
 org/conv/ConnectionManager.class
 module-info.class
-org/MainReceive.class
 org/SystemComponents.class
 org/conv/SenderThread.class
 org/network/NetworkReceiver.class

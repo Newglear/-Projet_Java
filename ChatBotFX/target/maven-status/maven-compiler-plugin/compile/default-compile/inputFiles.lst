@@ -1,6 +1,7 @@
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/database/User.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/gui/App.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/database/Message.java
+/home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/Flush.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/network/NetworkMessage.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/ThreadManager.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/gui/ChatController.java
@@ -16,5 +17,4 @@
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/network/NetworkReceiver.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/network/Types.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/conv/SenderThread.java
-/home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/org/MainReceive.java
 /home/newgz/Insa/Projet_Java/ChatBotFX/src/main/java/module-info.java

@@ -31,9 +31,10 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
+        stage.setTitle("Login");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Login");
+        stage.sizeToScene();
         stage.show();
         //TODO: add IP address to label
     }

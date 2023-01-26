@@ -82,8 +82,12 @@ public class LoginController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setScene(scene);
+        stage.setResizable(true);
         stage.setTitle("Chador");
+        stage.setScene(scene);
+        stage.setWidth(980);
+        stage.setHeight(660);
+        stage.sizeToScene();
         stage.centerOnScreen();
 
         ChatController cc = (ChatController) loader.getController();
@@ -96,6 +100,7 @@ public class LoginController {
         SystemComponents.getInstance().setState("chat");
         cc.updateUsername(nickname);
         cc.displayContacts();
+        //stage.setResizable(false);
     }
     public void setIpAddress(String addr){
         IpAddress = addr;

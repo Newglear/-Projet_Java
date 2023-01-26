@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Version Finale ?">
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="CICD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chatsystem/database/HistoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chatsystem/database/HistoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/database/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/database/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-chatsystem.network.UDPBroadcastTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-chatsystem.network.UDPBroadcastTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/chatsystem.network.UDPBroadcastTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/chatsystem.network.UDPBroadcastTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chatsystem/conversation/TCPConversationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chatsystem/conversation/TCPConversationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chatsystem/database/ContactTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chatsystem/database/ContactTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chatsystem/database/HistoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chatsystem/database/HistoryTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chatsystem/network/UDPBroadcastTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chatsystem/network/UDPBroadcastTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +72,16 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UDPBroadcastTest">
-    <configuration name="HistoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gui.App" />
       <module name="ChatBotFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chatsystem.database.*" />
+          <option name="PATTERN" value="org.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chatsystem.database" />
-      <option name="MAIN_CLASS_NAME" value="chatsystem.database.HistoryTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="JUnit.UDPBroadcastTest.Nickname_Update" />
         <item itemvalue="JUnit.UDPBroadcastTest.Unicity_Check" />
         <item itemvalue="JUnit.UDPBroadcastTest.Simple_Interaction" />
-        <item itemvalue="JUnit.HistoryTests" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +168,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674735284884</updated>
       <workItem from="1674735288337" duration="19453000" />
-      <workItem from="1674759537573" duration="1677000" />
+      <workItem from="1674759537573" duration="2279000" />
+      <workItem from="1674767539434" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -278,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674759325143</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="CICD">
+      <created>1674761241313</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674761241313</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +326,7 @@
     <MESSAGE value="UDP Sender Broadcast Address fixed" />
     <MESSAGE value="Corrections" />
     <MESSAGE value="Version Finale ?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Finale ?" />
+    <MESSAGE value="CICD" />
+    <option name="LAST_COMMIT_MESSAGE" value="CICD" />
   </component>
 </project>
