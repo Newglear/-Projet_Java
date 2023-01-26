@@ -10,6 +10,7 @@ name: Java CI with Maven
 
 on:
   push:
+    branches: Integration_Gwen, main
 
 
 jobs:
