@@ -62,6 +62,9 @@ public class NetworkReceiver extends Thread {
                 User usr = gson.fromJson(msg.getObject(), User.class);
                 System.out.println(usr);
 
+                if(usr.getAddr() == null ){
+                    continue;
+                }
                 if(ThreadMode && usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp())) {
                     continue;
                 }

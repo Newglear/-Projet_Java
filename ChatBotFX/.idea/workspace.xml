@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Maj window">
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Maj udp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/gui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/gui/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
@@ -160,7 +166,7 @@
       <updated>1674735284884</updated>
       <workItem from="1674735288337" duration="19453000" />
       <workItem from="1674759537573" duration="2279000" />
-      <workItem from="1674767539434" duration="2035000" />
+      <workItem from="1674767539434" duration="3556000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -295,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674769213105</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Maj udp">
+      <created>1674769676431</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674769676431</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +339,7 @@
     <MESSAGE value="Version Finale ?" />
     <MESSAGE value="CICD" />
     <MESSAGE value="Maj window" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj window" />
+    <MESSAGE value="Maj udp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj udp" />
   </component>
 </project>

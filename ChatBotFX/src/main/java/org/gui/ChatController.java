@@ -268,8 +268,10 @@ public class ChatController {
                 SenderThread th= ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 if(th == null ){
                     ThreadManager.createSenderThread(InetAddress.getByName(SystemComponents.getInstance().db.LoadUser(Uid).getAddr()),SystemComponents.getInstance().db.LoadUser(Uid).getPort()+1);
+                    sleep(1500);
                     th = ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 }
+
                 th.Send(new Message(SystemComponents.getInstance().db.LoadUser(Uid).getPseudo(),true,inputText));
 
             }

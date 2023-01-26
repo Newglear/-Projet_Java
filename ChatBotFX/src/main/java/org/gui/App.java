@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 /**
  * JavaFX App
  */
@@ -37,22 +39,24 @@ public class App extends Application {
         stage.sizeToScene();
         stage.show();
         //TODO: add IP address to label
+        LoginController lc = loader.getController();
+        lc.updateIp();
     }
 
     @Override
-    public void stop() throws SQLException, SocketException, UnknownHostException {
+    public void stop() throws SQLException, SocketException, UnknownHostException, InterruptedException {
         //TODO: fermer les threads
         SystemComponents sys = SystemComponents.getInstance();
         NetworkSender send = new NetworkSender(new User(sys.getCurrentNickname(), sys.getPort(), sys.getCurrentNickname()), Types.UDPMode.Disconnect,1234);
         SystemComponents.getInstance().db.DisconnectAll();
         System.out.println("L'application s'est arrêtée");
+        sleep(1000);
         System.exit(0);
     }
 
     public static void main(String[] args) throws IOException, SQLException {
         //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
-        //sys.db.Flush();
         int port = 1234;
         sys.setPort(port);
         sys.setCurrentIp(SystemComponents.getIPv4().getHostName());

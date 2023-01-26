@@ -21,6 +21,8 @@ import org.network.Types;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +32,7 @@ public class LoginController {
 
     public ArrayList<String> usernames = new ArrayList<>(Arrays.asList("Paul","Jean"));
     public String userNickname;
-    public String IpAddress;
+    ;
 
     public boolean checkUnicity(String  username){
         boolean isFind = true;
@@ -48,6 +50,8 @@ public class LoginController {
 
     @FXML
     private Label warning_lb;
+    @FXML
+    private Label labelIp;
 
     @FXML
     private TextField username_in;
@@ -102,7 +106,8 @@ public class LoginController {
         cc.displayContacts();
         //stage.setResizable(false);
     }
-    public void setIpAddress(String addr){
-        IpAddress = addr;
+
+    public void updateIp() throws SocketException, UnknownHostException {
+        labelIp.setText(SystemComponents.getIPv4().getHostName());
     }
 }
