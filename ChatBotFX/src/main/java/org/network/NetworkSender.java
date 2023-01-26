@@ -10,7 +10,7 @@ public class NetworkSender{
     private final DatagramSocket senderSock;
     int destinationPort;
     Gson gson= new Gson();
-	private String broad = "255.255.255.255" ;
+	private String broad = "192.168.1.255" ;
 
     public NetworkSender(User infos, Types.UDPMode mode,int port) throws SocketException {
         senderSock = new DatagramSocket();

@@ -31,7 +31,9 @@ public class ThreadManager {
     }
     public static SenderThread getThread(String Address){
         for(SenderThread th: senderThreadList){
-            if(th.getName() == Address){
+            System.out.println(th.getName());
+            System.out.println(Address);
+            if(th.getName().equals(Address)){
                 return th;
             }
         }

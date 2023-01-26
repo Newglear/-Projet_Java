@@ -122,12 +122,15 @@ public class DatabaseManager  {
         p.execute();
     }
     public synchronized void Insert(User user) throws SQLException {
-        String query = "INSERT INTO Users(Nickname, Ip, Port) values (?,?,?)";
-        PreparedStatement p = con.prepareStatement(query);
-        p.setString(1,user.getPseudo());
-        p.setString(2, user.getAddr());
-        p.setInt(3,user.getPort());
-        p.execute();
+        int Uid = LoadUserID(user.getPseudo());
+        if(Uid == 0){
+            String query = "INSERT INTO Users(Nickname, Ip, Port) values (?,?,?)";
+            PreparedStatement p = con.prepareStatement(query);
+            p.setString(1,user.getPseudo());
+            p.setString(2, user.getAddr());
+            p.setInt(3,user.getPort());
+            p.execute();
+        }
         try{
             invoke(Types.DataEvent.NewUser,user.getPseudo());
         }catch (IOException e){

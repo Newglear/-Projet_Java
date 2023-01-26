@@ -54,8 +54,8 @@ public class App extends Application {
     public static void main(String[] args) throws IOException, SQLException {
         //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
-        SystemComponents.getInstance().db.Flush();
-        InetAddress addr = InetAddress.getByName("192.168.146.236");
+        //SystemComponents.getInstance().db.Flush();
+        InetAddress addr = InetAddress.getByName("192.168.1.96");
         int port = 1234;
         sys.setPort(port);
         sys.setCurrentIp(addr.getHostName());

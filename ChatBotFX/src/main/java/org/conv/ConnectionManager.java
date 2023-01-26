@@ -7,7 +7,7 @@ import java.net.*;
 
 public class ConnectionManager extends Thread {
 
-    public static int minNumPort = 1234;
+    public static int minNumPort = 1236;
     public static int maxNumPort = 2235;
     public ServerSocket serverSocketManager;
 

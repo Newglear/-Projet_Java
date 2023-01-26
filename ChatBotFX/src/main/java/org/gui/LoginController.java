@@ -51,22 +51,23 @@ public class LoginController {
     private void userLogin() throws IOException, InterruptedException, SQLException {
         String nickname = username_in.getText();
         if(nickname.length() > 0) {
-            InetAddress Baddr = InetAddress.getByName("255.255.255.255");
+            InetAddress Baddr = InetAddress.getByName("192.168.1.255");
             User u = new User(nickname, SystemComponents.getInstance().getPort(), SystemComponents.getInstance().getCurrentIp());
             NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.UserInfos, SystemComponents.getInstance().getPort());
 
             sleep(1000);
             if (!SystemComponents.getInstance().UnicityCheck()) {
                 SystemComponents.getInstance().setCurrentNickname(nickname);
+                if(App.fxmlloader.getController().getClass() == ChatController.class){
+                    SystemComponents.getInstance().db.subscribe(App.fxmlloader.getController());
+                }
+                SystemComponents.getInstance().setState("chat");
 
                 App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
                 ChatController cc = (ChatController) App.fxmlloader.getController();
                 cc.updateUsername(nickname);
                 cc.displayContacts();
-                if(App.fxmlloader.getController().getClass() == ChatController.class){
-                    SystemComponents.getInstance().db.subscribe(App.fxmlloader.getController());
-                }
-                SystemComponents.getInstance().setState("chat");
+
             } else {
                 warning_lb.setText("Warning: this username is already used");
                 warning_lb.setVisible(true);

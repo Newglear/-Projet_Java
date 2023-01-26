@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
 public class test {
 
     public static void main(String[] args) throws UnknownHostException, InterruptedException, SQLException {
-        //SystemComponents sys = SystemComponents.getInstance();
+        SystemComponents sys = SystemComponents.getInstance();
         //DatabaseManager.Flush();
         InetAddress a = InetAddress.getByName("localhost");
         System.out.println("========================");
@@ -22,11 +22,11 @@ public class test {
         System.out.println("========================");
         //ConnectionManager c = new ConnectionManager();
         //c.start();
-        ThreadManager.createSenderThread(InetAddress.getByName("localhost"),1235);
-        SenderThread th =ThreadManager.getThread("localhost");
-        System.out.println(th);
+        ThreadManager.createSenderThread(InetAddress.getByName("192.168.1.198"),1235);
+        SenderThread th =ThreadManager.getThread("192.168.1.198");
         sleep(1000);
-        th.Send(new Message("Cador","ALEDDD"));
+        System.out.println("GRRRRRRR"+th);
+        th.Send(new Message("gg","Wesh ma gueule!"));
     }
 
 }

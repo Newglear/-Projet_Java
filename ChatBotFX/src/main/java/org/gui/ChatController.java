@@ -252,7 +252,7 @@ public class ChatController {
 
 
     @FXML
-    private void sendMessage() throws IOException, SQLException {
+    private void sendMessage() throws IOException, SQLException, InterruptedException {
         if(activeBorderPane != null) {
             String inputText = messageInput.getText();
             if (inputText.length() > 0) {
@@ -262,9 +262,10 @@ public class ChatController {
 
                 SenderThread th= ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 if(th == null ){
-                    ThreadManager.createSenderThread(InetAddress.getByName(SystemComponents.getInstance().db.LoadUser(Uid).getAddr()),SystemComponents.getInstance().db.LoadUser(Uid).getPort());
+                    ThreadManager.createSenderThread(InetAddress.getByName(SystemComponents.getInstance().db.LoadUser(Uid).getAddr()),SystemComponents.getInstance().db.LoadUser(Uid).getPort()+1);
                     th = ThreadManager.getThread(db.LoadUser(Uid).getAddr());
                 }
+                sleep(1000);
                 th.Send(new Message(SystemComponents.getInstance().getCurrentNickname(),true,inputText));
 
                 SystemComponents.getInstance().db.Insert(new Message(db.LoadUser(Uid).getPseudo(),true,inputText));
@@ -305,7 +306,7 @@ public class ChatController {
         sleep(1000);
     }
     @FXML
-    public void changePseudo(){
+    public void changePseudo() throws SQLException, IOException {
         String pseudo = inputChangePseudo.getText();
         if(pseudo.length() > 0){
             try{
@@ -318,6 +319,7 @@ public class ChatController {
 
                 labelWarningPseudo.setVisible(false);
             }else{
+                displayContacts();
                 labelWarningPseudo.setText("Warning: this username is already used");
                 labelWarningPseudo.setVisible(true);
             }
@@ -346,7 +348,7 @@ public class ChatController {
                 break;
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
-                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo() == msg.getSender())
+                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()))
                     createMessage(msg.getMsg(),msg.isSent());
                 break;
             default:
