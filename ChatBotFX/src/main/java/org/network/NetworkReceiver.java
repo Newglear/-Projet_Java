@@ -69,6 +69,9 @@ public class NetworkReceiver extends Thread {
                         break;
                     case Answer_Infos:
                         Add_User(msg.getObject());
+                    case Answer_Nickname:
+                        //Todo A gérer
+                        break;
                     case Error:
                         System.out.println("Error Encountered");
                         SystemComponents.getInstance().setUnicityCheck(true);
@@ -93,7 +96,7 @@ public class NetworkReceiver extends Thread {
         }else
         {
             try{
-                NetworkSender sender = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Answer_Infos);
+                NetworkSender sender = new NetworkSender(new User(SystemComponents.getInstance().getCurrentNickname(),SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp()),Types.UDPMode.Answer_Infos,SystemComponents.getInstance().getPort());
                 SystemComponents.getInstance().db.Insert(usr);
             } catch (SQLException s){
                 System.out.println(s);
@@ -129,7 +132,7 @@ public class NetworkReceiver extends Thread {
         System.out.println("Réponse recue ");
         User usr = gson.fromJson(obj, User.class);
         try {
-            SystemComponents.getInstance().db.Update(usr);
+            SystemComponents.getInstance().db.Insert(usr);
         } catch (SQLException s) {
             System.out.println(s);
         }

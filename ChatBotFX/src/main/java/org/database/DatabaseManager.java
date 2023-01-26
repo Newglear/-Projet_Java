@@ -188,10 +188,6 @@ public class DatabaseManager  {
         PreparedStatement p = con.prepareStatement(query);
         p.setInt(1,LoadUserID(u.getPseudo()));
         ResultSet rs = p.executeQuery();
-        System.out.println(rs);
-        /*System.out.println("........"+ u);
-        System.out.println("?????"+u.getPseudo());
-        System.out.println("AAAAAAAA: "+LoadUserID(u.getPseudo()));*/
         while (rs.next()){
             System.out.println("Bool : "+ rs.getString("Sent"));
             Message m = new Message(rs.getString("Nickname"),rs.getString("Sent").equals("true"),rs.getString("Content"),rs.getDate("Date"));
