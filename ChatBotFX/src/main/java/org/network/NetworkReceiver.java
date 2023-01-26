@@ -26,6 +26,9 @@ public class NetworkReceiver extends Thread {
         System.out.println("====== RECEIVING THREAD INITIATED ======");
         start();
     }
+    public void setThreadMode(boolean mode){
+        ThreadMode = mode;
+    }
 
     public static void IncrementCount(){
         ContactCount++;
@@ -58,8 +61,15 @@ public class NetworkReceiver extends Thread {
                 NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
                 User usr = gson.fromJson(msg.getObject(), User.class);
                 System.out.println(usr);
-                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp()) && ThreadMode)
+                if(ThreadMode){
                     continue;
+                }
+                if(usr.getAddr() == null ){
+                    continue;
+                }
+                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp())) {
+                    continue;
+                }
                 switch (msg.getMode()){
                     case UserInfos:
                         Receive_Infos(msg.getObject());

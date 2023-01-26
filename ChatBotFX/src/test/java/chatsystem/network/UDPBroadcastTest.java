@@ -21,17 +21,20 @@ import static org.junit.Assert.assertTrue;
 
 public class UDPBroadcastTest {
 
+    int num = 0;
     User usr;
     ArrayList<User> contactList;
     static SystemComponents sys;
     @BeforeClass
     public static void initSystem() {
-        sys = SystemComponents.getInstance();
+
     }
     @Before
     public void initUdp() throws SQLException {
+        sys = SystemComponents.getInstance();
+        num++;
         SystemComponents.getInstance().db.Flush();
-        NetworkReceiver.Enable_ThreadMode_Mode(true);
+        NetworkReceiver.Enable_ThreadMode_Mode(false);
         NetworkReceiver.resetContactCount();
         if(contactList != null)
             contactList.clear();
@@ -60,33 +63,31 @@ public class UDPBroadcastTest {
             throw new RuntimeException(e);
         }
         System.out.println(NetworkReceiver.getContactCount());
-        assertEquals( 2,NetworkReceiver.getContactCount());
+        assertEquals( 1,NetworkReceiver.getContactCount());
 
     }
 
     @Test
     public void Nickname_Update() throws SocketException, SQLException, UnknownHostException {
-        SystemComponents.getInstance().db.Insert(new User("Tester",1234,"localhost"));
-        NetworkSender sender = new NetworkSender(new User("Modif",1234,"localhost"), Types.UDPMode.Nickname,1234);
+        SystemComponents.getInstance().db.Insert(new User("Tester",1234,"192.168.1.1"));
+        SystemComponents.getInstance().NetworkServer.setThreadMode(false);
         try {
             sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        User u = new User("Modif",1234,"192.168.1.1");
+        NetworkSender sender = new NetworkSender(u, Types.UDPMode.Nickname,1234);
+        try {
+            sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(SystemComponents.getInstance().db.LoadUsers());
         assertTrue(SystemComponents.getInstance().db.LoadUsers().contains("Modif"));
     }
-    /*
-    @Test
-    public void Unicity_Check() throws SocketException, SQLException {
-        NetworkReceiver.Enable_ThreadMode_Mode(true);
-        SystemComponents.getInstance().db.Insert(new User("Tester",1234,"localhost"));
-        NetworkSender sender = new NetworkSender(new User("Tester",1234,"localhost"), Types.UDPMode.Nickname,1234);
-        try {
-            sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
+
+
     @AfterClass
     public static void Clear() throws SQLException {
         SystemComponents.getInstance().db.Flush();

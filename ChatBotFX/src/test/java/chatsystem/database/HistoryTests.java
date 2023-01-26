@@ -7,6 +7,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.network.NetworkReceiver;
 
 import java.sql.Date;
 import java.sql.SQLException;
@@ -26,6 +27,7 @@ public class HistoryTests {
     public static void initSystem() throws SQLException {
         int num = 1;
         sys = SystemComponents.getInstance();
+        sys.NetworkServer.setThreadMode(true);
         if(contactList != null)
             contactList.clear();
         contactList = new ArrayList<>();
