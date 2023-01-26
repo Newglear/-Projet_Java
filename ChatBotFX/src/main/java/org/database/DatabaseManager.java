@@ -132,8 +132,11 @@ public class DatabaseManager  {
             p.setBoolean(4,true);
             p.execute();
         }
+        System.out.println("BLBLBLBLBLBBLLBBLBL");
         try{
+            System.out.println("NYAAAAAA");
             invoke(Types.DataEvent.NewUser,user.getPseudo());
+            System.out.println("NYAAAAAA22222222");
         }catch (IOException e){
             e.printStackTrace();
         }

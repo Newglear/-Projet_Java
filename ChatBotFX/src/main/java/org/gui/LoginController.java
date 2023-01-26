@@ -58,13 +58,13 @@ public class LoginController {
             sleep(1000);
             if (!SystemComponents.getInstance().UnicityCheck()) {
                 SystemComponents.getInstance().setCurrentNickname(nickname);
+
+                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
+                ChatController cc = (ChatController) App.fxmlloader.getController();
                 if(App.fxmlloader.getController().getClass() == ChatController.class){
                     SystemComponents.getInstance().db.subscribe(App.fxmlloader.getController());
                 }
                 SystemComponents.getInstance().setState("chat");
-
-                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
-                ChatController cc = (ChatController) App.fxmlloader.getController();
                 cc.updateUsername(nickname);
                 cc.displayContacts();
 

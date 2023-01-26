@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Ajout de la gestion des adresses, Modification de Insert(User)">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Ajout d'utilisateur unique en pseudo dans la DB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
@@ -47,7 +47,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,6 +55,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gui.App" />
+      <module name="ChatBotFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674735284884</updated>
-      <workItem from="1674735288337" duration="1548000" />
+      <workItem from="1674735288337" duration="2789000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -73,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674736582015</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajout d'utilisateur unique en pseudo dans la DB">
+      <created>1674736925066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674736925067</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout de la gestion des adresses, Modification de Insert(User)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la gestion des adresses, Modification de Insert(User)" />
+    <MESSAGE value="Ajout d'utilisateur unique en pseudo dans la DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'utilisateur unique en pseudo dans la DB" />
   </component>
 </project>

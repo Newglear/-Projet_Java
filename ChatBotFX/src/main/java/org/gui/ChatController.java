@@ -268,7 +268,6 @@ public class ChatController {
                 sleep(1000);
                 th.Send(new Message(SystemComponents.getInstance().getCurrentNickname(),true,inputText));
 
-                SystemComponents.getInstance().db.Insert(new Message(db.LoadUser(Uid).getPseudo(),true,inputText));
             }
             createMessage(inputText, true);
                 messageInput.clear();
@@ -333,18 +332,19 @@ public class ChatController {
 
     public void handleDatabaseHandler(Types.DataEvent event, String data) throws IOException, SQLException {
 
+        System.out.printf("===== Gestion d'event"+event+"=====");
         if(!SystemComponents.getInstance().getState().equals("chat"))
         {
             System.out.println("Mauvais Contexte");
             return;
         }
-        System.out.printf("===== Gestion d'event"+event+"=====");
         switch(event){
             case NewUser:
                 createUser(data,true);
                 break;
             case RemUser:
                 deleteUser(data);
+                createUser(data,false);
                 break;
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
