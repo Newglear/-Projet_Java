@@ -259,7 +259,8 @@ public class ChatController {
                 String selectedUser = activeBorderPane.getId();
                 int Uid = Integer.parseInt(selectedUser);
                 DatabaseManager db  =SystemComponents.getInstance().db;
-                if(!db.LoadUsers().contains(db.LoadUser(Uid))){
+                if(!db.LoadUsers().contains(db.LoadUser(Uid).getPseudo())){
+                    System.out.println(db.LoadUsers());
                     System.out.println("Utilisateur Déconnecté");
                     return;
                 }
