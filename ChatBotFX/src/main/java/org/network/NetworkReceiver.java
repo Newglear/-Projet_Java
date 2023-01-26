@@ -106,7 +106,7 @@ public class NetworkReceiver extends Thread {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Changement de pseudo entrant " + usr.getPseudo() );
         if(usr.getPseudo().equals(SystemComponents.getInstance().getCurrentNickname()) && (ThreadMode||NicknameTestMode)){
-            NetworkSender send  = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
+            NetworkSender send  = new NetworkSender(new User(SystemComponents.getInstance().getCurrentNickname(),SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp()),usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
         }else {
             try {
                 SystemComponents.getInstance().db.Update(usr);

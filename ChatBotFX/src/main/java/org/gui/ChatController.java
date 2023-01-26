@@ -322,10 +322,9 @@ public class ChatController {
             }
             if(!SystemComponents.getInstance().UnicityCheck()){
                 updateUsername(pseudo);
-
+                displayContacts();
                 labelWarningPseudo.setVisible(false);
             }else{
-                displayContacts();
                 labelWarningPseudo.setText("Warning: this username is already used");
                 labelWarningPseudo.setVisible(true);
             }
