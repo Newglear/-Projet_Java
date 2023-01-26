@@ -10,7 +10,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: Integration_Gwen
+    branches: [ "main", "Integration_Gwen" ]
 
 
 jobs:
