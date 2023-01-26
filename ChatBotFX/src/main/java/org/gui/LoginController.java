@@ -3,6 +3,8 @@ package org.gui;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -54,11 +56,7 @@ public class LoginController {
             //sleep(500);
             if (!SystemComponents.UnicityCheck()) { // TODO : Tester le check unicity
                 SystemComponents.setCurrentNickname(nickname);
-
-                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
-                ChatController cc = (ChatController) App.fxmlloader.getController();
-                cc.updateUsername(nickname);
-                cc.displayContacts();
+                switchLoginScene(e, nickname);
             } else {
                 warning_lb.setText("Warning: this username is already used");
                 warning_lb.setVisible(true);
@@ -67,6 +65,22 @@ public class LoginController {
             warning_lb.setText("Warning: at least one character is needed");
             warning_lb.setVisible(true);
         }
+    }
+
+    private void switchLoginScene(ActionEvent e, String nickname) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("chat.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Chador");
+        stage.centerOnScreen();
+
+        ChatController cc = (ChatController) loader.getController();
+        //TODO: si tu veux un chatcontroller dans une autre classe tu écris la ligne en  dessous pour le récupérer
+        //ChatController cc = (ChatController) (new FXMLLoader(getClass().getResource("chat.fxml"))).getController();
+        cc.updateUsername(nickname);
+        cc.displayContacts();
     }
 
 }

@@ -86,7 +86,7 @@ public class ChatController {
         if(activeBorderPane != null){
             activeBorderPane.setStyle("-fx-background-color:#dfdfdf; -fx-background-radius:10");
         }
-        activeBorderPane = (BorderPane) e.getTarget();
+        activeBorderPane = (BorderPane) e.getSource(); //TODO: Dire à gwen
         activeBorderPane.setStyle("-fx-border-color:#ff5555; -fx-border-radius:10");
     }
 
@@ -261,14 +261,16 @@ public class ChatController {
         createMessage(message, false);
     }
 
-    @FXML
     public void displayContacts() throws SQLException, IOException {
+        clearUsers();
         for(String s: DatabaseManager.LoadUsers()){
             System.out.println(s);
             System.out.println(DatabaseManager.LoadUsers());
             createUser(s,true);
         }
     }
+
+    public void clearUsers(){vboxUsersConv.getChildren().clear();}
 
     @FXML
     public void changePseudo(){
@@ -280,6 +282,13 @@ public class ChatController {
             labelWarningPseudo.setVisible(true);
         }
     }
+
+    /*@FXML
+    public void deleteUser(String id){
+        BorderPane user = (BorderPane) App.scene.lookup("#"+id);
+        vboxUsersConv.getChildren().remove(user);
+        System.out.println("BorderPane deleted : "+id);
+    }*/
 
 
 }
