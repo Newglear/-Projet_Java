@@ -92,11 +92,11 @@ public class NetworkReceiver extends Thread {
         User usr = gson.fromJson(obj, User.class);
         System.out.println("Nouvel Utilisateur "+usr);
         if(usr.getPseudo().equals(SystemComponents.getInstance().getCurrentNickname()) && (ThreadMode||NicknameTestMode )){
-            NetworkSender send  = new NetworkSender(usr,usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
+            NetworkSender send  = new NetworkSender(new User(SystemComponents.getInstance().getCurrentNickname(),SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp()),usr.getAddr(),usr.getPort(), Types.UDPMode.Error);
         }else
         {
             try{
-                NetworkSender sender = new NetworkSender(new User(SystemComponents.getInstance().getCurrentNickname(),SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp()),Types.UDPMode.Answer_Infos,SystemComponents.getInstance().getPort());
+                NetworkSender sender = new NetworkSender(new User(SystemComponents.getInstance().getCurrentNickname(),SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp()),usr.getAddr(),usr.getPort(),Types.UDPMode.Answer_Infos);
                 SystemComponents.getInstance().db.Insert(usr);
             } catch (SQLException s){
                 System.out.println(s);

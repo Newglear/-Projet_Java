@@ -277,12 +277,20 @@ public class ChatController {
         createMessage(message, false);
     }
 
+    public void clearUsers(){vboxUsersConv.getChildren().clear();}
+
     @FXML
     public void displayContacts() throws SQLException, IOException {
+        clearUsers();
         for(String s: SystemComponents.getInstance().db.LoadUsers()){
             System.out.println(s);
             System.out.println(SystemComponents.getInstance().db.LoadUsers());
             createUser(s,true);
+        }
+        for(String s: SystemComponents.getInstance().db.LoadDisconnectedUsers()){
+            System.out.println(s);
+            System.out.println(SystemComponents.getInstance().db.LoadUsers());
+            createUser(s,false);
         }
     }
 
@@ -339,7 +347,8 @@ public class ChatController {
         }
         switch(event){
             case NewUser:
-                createUser(data,true);
+                //createUser(data,true); // TODO Remplacer par Display contacts pour avoir le même format (Connecté -> Déconnecté)?
+                displayContacts();
                 break;
             case RemUser:
                 deleteUser(data);

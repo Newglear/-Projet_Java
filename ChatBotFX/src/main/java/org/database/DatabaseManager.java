@@ -98,7 +98,18 @@ public class DatabaseManager  {
     }
     public ArrayList<String> LoadUsers() throws SQLException {
         ArrayList<String> l = new ArrayList<>();
-        String query = "Select * from Users";
+        String query = "Select * from Users where State = 1 ORDER BY Nickname ASC";
+        PreparedStatement p = con.prepareStatement(query);
+        ResultSet rs = p.executeQuery();
+        while (rs.next()){
+            l.add(rs.getString("Nickname"));
+        }
+        return l;
+    }
+
+    public ArrayList<String> LoadDisconnectedUsers() throws SQLException {
+        ArrayList<String> l = new ArrayList<>();
+        String query = "Select * from Users where State = 0 ORDER BY Nickname ASC";
         PreparedStatement p = con.prepareStatement(query);
         ResultSet rs = p.executeQuery();
         while (rs.next()){
@@ -184,7 +195,7 @@ public class DatabaseManager  {
     }
     public synchronized ArrayList<Message> LoadHistory(User u) throws SQLException {
         ArrayList<Message> l = new ArrayList<>();
-        String query = "Select Nickname,Content,Sent,History.Date from History inner join Users on Users.ID = History.UserID where UserID = ?";
+        String query = "Select Nickname,Content,Sent,History.Date from History inner join Users on Users.ID = History.UserID where UserID = ? ";
         PreparedStatement p = con.prepareStatement(query);
         p.setInt(1,LoadUserID(u.getPseudo()));
         ResultSet rs = p.executeQuery();
