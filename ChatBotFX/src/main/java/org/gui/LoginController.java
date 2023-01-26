@@ -64,12 +64,12 @@ public class LoginController {
             if (!SystemComponents.getInstance().UnicityCheck()) {
                 SystemComponents.getInstance().setCurrentNickname(nickname);
 
-                //App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
-                Parent p = FXMLLoader.load(getClass().getResource("chat.fxml"));
+                App.setWindow("chat", (Stage) username_in.getScene().getWindow(), "Chador", 980, 630);
+                /*Parent p = FXMLLoader.load(getClass().getResource("chat.fxml"));
                 Scene sc = new Scene(p);
                 Stage st = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 st.setScene(sc);
-                st.centerOnScreen();
+                st.centerOnScreen();*/
 
                 ChatController cc = (ChatController) App.fxmlloader.getController();
                 if(App.fxmlloader.getController().getClass() == ChatController.class){

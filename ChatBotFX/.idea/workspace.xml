@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Liste de contacts réparé">
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Unity Check réparé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674735284884</updated>
-      <workItem from="1674735288337" duration="11760000" />
+      <workItem from="1674735288337" duration="13013000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -193,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674746621417</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Unity Check réparé">
+      <created>1674749128736</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674749128736</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +215,7 @@
     <MESSAGE value="Correction de bugs : Envoi de message mal taggués dans la DB" />
     <MESSAGE value="Test d'envoie des user infos" />
     <MESSAGE value="Liste de contacts réparé" />
-    <option name="LAST_COMMIT_MESSAGE" value="Liste de contacts réparé" />
+    <MESSAGE value="Unity Check réparé" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unity Check réparé" />
   </component>
 </project>

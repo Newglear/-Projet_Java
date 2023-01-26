@@ -47,6 +47,7 @@ public class SenderThread extends Thread {
             if(convSocket == null){
                 sleep(1500);
             }
+            System.out.println("Envoi de message");
             msg.setSent(true);
             outChannel = new PrintWriter(convSocket.getOutputStream(), true);
             Message m = new Message(SystemComponents.getInstance().getCurrentNickname(),msg.isSent(),msg.getMsg());

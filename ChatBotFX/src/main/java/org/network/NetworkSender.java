@@ -90,7 +90,7 @@ public class NetworkSender{
         String user = gson.toJson(usr);
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Error, user));
         DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(addr), port);
-        System.out.println("Envoi de réponse");
+        System.out.println("Envoi d'erreur Pseudo");
         senderSock.send(outPacket);
         System.out.println("Réponse Envoyée");
         senderSock.close();
