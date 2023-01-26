@@ -1,6 +1,7 @@
 package org.network;
 
 import com.google.gson.Gson;
+import org.SystemComponents;
 import org.database.Message;
 import org.database.User;
 
@@ -11,10 +12,11 @@ public class NetworkSender{
     private final DatagramSocket senderSock;
     int destinationPort;
     Gson gson= new Gson();
-	private String broad = "192.168.1.255" ;
+	private String broad ;
 
-    public NetworkSender(User infos, Types.UDPMode mode,int port) throws SocketException {
+    public NetworkSender(User infos, Types.UDPMode mode,int port) throws SocketException, UnknownHostException {
         senderSock = new DatagramSocket();
+        broad = SystemComponents.toBroadcast(SystemComponents.getIPv4()).getHostName();
         this.destinationPort = port;
         senderSock.setBroadcast(true);
         System.out.println("===== Phase d'envoi =====");

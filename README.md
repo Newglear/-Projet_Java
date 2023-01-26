@@ -11,3 +11,5 @@ TODO :
 - Gestion des utilisateurs connectés et déconnectés (A gérer avec la fonction d'Evan)
 - Message doublés en affichage ? 
 - Border pane null ? 
+- Changement de pseudo dans chat ? **A tester plus en profondeur**
+- Broadcast cassé 

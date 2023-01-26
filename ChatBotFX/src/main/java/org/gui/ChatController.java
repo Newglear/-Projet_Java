@@ -303,13 +303,13 @@ public class ChatController {
 
     private void changeNickname(String nickname) throws SocketException, InterruptedException, UnknownHostException {
         try {
-            InetAddress Baddr = InetAddress.getByName("255.255.255.255");
+            InetAddress Baddr = SystemComponents.toBroadcast(SystemComponents.getIPv4());
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
         User u = new User(nickname,SystemComponents.getInstance().getPort(),SystemComponents.getInstance().getCurrentIp());
         NetworkSender sendInfos = new NetworkSender(u, Types.UDPMode.Nickname,SystemComponents.getInstance().getPort());
-        sleep(1000);
+        sleep(1500);
     }
     @FXML
     public void changePseudo() throws SQLException, IOException {
@@ -354,7 +354,7 @@ public class ChatController {
 
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
-                if(activeBorderPane != null){
+                if(activeBorderPane == null){
                     return;
                 }
                 if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && !msg.isSent() )

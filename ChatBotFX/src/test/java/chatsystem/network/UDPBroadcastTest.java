@@ -8,6 +8,7 @@ import org.network.NetworkSender;
 import org.network.Types;
 
 import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,7 +43,7 @@ public class UDPBroadcastTest {
         }
     }
     @Test
-    public void SendReceiveContacts() throws SocketException, InterruptedException, SQLException {
+    public void SendReceiveContacts() throws SocketException, InterruptedException, SQLException, UnknownHostException {
         for(User u: contactList){
             NetworkSender n = new NetworkSender(u, Types.UDPMode.UserInfos,1234);
             sleep(100);
@@ -51,7 +52,7 @@ public class UDPBroadcastTest {
     }
 
     @Test
-    public void Simple_Interaction() throws SocketException{
+    public void Simple_Interaction() throws SocketException, UnknownHostException {
         NetworkSender sender = new NetworkSender(usr, Types.UDPMode.UserInfos,1234);
         try {
             sleep(100);
@@ -64,7 +65,7 @@ public class UDPBroadcastTest {
     }
 
     @Test
-    public void Nickname_Update() throws SocketException, SQLException {
+    public void Nickname_Update() throws SocketException, SQLException, UnknownHostException {
         SystemComponents.getInstance().db.Insert(new User("Tester",1234,"localhost"));
         NetworkSender sender = new NetworkSender(new User("Modif",1234,"localhost"), Types.UDPMode.Nickname,1234);
         try {
