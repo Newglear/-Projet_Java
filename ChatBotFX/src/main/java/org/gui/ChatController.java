@@ -347,19 +347,17 @@ public class ChatController {
         }
         switch(event){
             case NewUser:
-                //createUser(data,true);
-                displayContacts();
-                break;
-            case RemUser:
-                deleteUser(data);
-                createUser(data,false);
-                break;
             case UpdateUser:
+            case RemUser:
                 displayContacts();
                 break;
+
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
-                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && activeBorderPane != null)
+                if(activeBorderPane != null){
+                    return;
+                }
+                if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && !msg.isSent() )
                     createMessage(msg.getMsg(),msg.isSent());
                 break;
             default:
