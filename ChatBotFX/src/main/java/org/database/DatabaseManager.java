@@ -124,11 +124,12 @@ public class DatabaseManager  {
     public synchronized void Insert(User user) throws SQLException {
         int Uid = LoadUserID(user.getPseudo());
         if(Uid == 0){
-            String query = "INSERT INTO Users(Nickname, Ip, Port) values (?,?,?)";
+            String query = "INSERT INTO Users(Nickname, Ip, Port,State) values (?,?,?,?)";
             PreparedStatement p = con.prepareStatement(query);
             p.setString(1,user.getPseudo());
             p.setString(2, user.getAddr());
             p.setInt(3,user.getPort());
+            p.setBoolean(4,true);
             p.execute();
         }
         try{

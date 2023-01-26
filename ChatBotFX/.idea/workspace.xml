@@ -4,37 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ead6696-0151-411d-b85b-de8b3631e742.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Ajout de la gestion des adresses, Modification de Insert(User)">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChaDBsqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ChaDBsqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/database/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/MainSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MainSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ThreadManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/ConnectionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/ReceiverThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/ReceiverThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/database/DatabaseManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/Types$DataEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/Types$DataEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/Types$UDPMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/Types$UDPMode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/network/Types.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/Types.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -84,11 +64,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674735284884</updated>
-      <workItem from="1674735288337" duration="1197000" />
+      <workItem from="1674735288337" duration="1548000" />
     </task>
+    <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
+      <created>1674736582015</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674736582015</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajout de la gestion des adresses, Modification de Insert(User)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la gestion des adresses, Modification de Insert(User)" />
   </component>
 </project>
