@@ -52,26 +52,10 @@ public class App extends Application {
 
 
     public static void main(String[] args) throws IOException, SQLException {
-        //System.out.println(System.getProperty("user.dir"));
         SystemComponents sys = SystemComponents.getInstance();
-        //SystemComponents.getInstance().db.Flush();
         int port = 1234;
         sys.setPort(port);
         sys.setCurrentIp(SystemComponents.getIPv4().getHostName());
-
-        /*List<String> nicknames = Arrays.asList("Gwen","Cador","Evan","Joel","Kiki");
-        for(String n:nicknames){
-            SystemComponents.getInstance().db.Insert(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."));
-            System.out.println(n);
-        }
-        ArrayList<Message> messageList = new ArrayList<>();
-        messageList.add(new Message(nicknames.get(0),true,"Message de test de Gwen"));
-        messageList.add(new Message(nicknames.get(1),true,"szerguihrigbs"));
-        messageList.add(new Message(nicknames.get(0),true,"vszjbhuzsbvkjhdfgbsrg"));
-        messageList.add(new Message(nicknames.get(1),false,"dgfbjhbnsduibsdfuihjsbrgf"));
-        for(Message m: messageList){
-            SystemComponents.getInstance().db.Insert(m);
-        }*/
         launch();
     }
 

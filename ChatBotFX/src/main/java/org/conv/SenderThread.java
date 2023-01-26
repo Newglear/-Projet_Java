@@ -45,7 +45,7 @@ public class SenderThread extends Thread {
     public void Send(Message msg){
         try {
             if(convSocket == null){
-                sleep(1000);
+                sleep(1500);
             }
             msg.setSent(true);
             outChannel = new PrintWriter(convSocket.getOutputStream(), true);

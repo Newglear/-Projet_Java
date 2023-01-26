@@ -57,8 +57,8 @@ public class NetworkReceiver extends Thread {
                 String var = new String(inPacket.getData(), 0, inPacket.getLength());
                 NetworkMessage msg = gson.fromJson(var, NetworkMessage.class);
                 User usr = gson.fromJson(msg.getObject(), User.class);
-
-                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp()) &&  ThreadMode )
+                System.out.println(usr);
+                if(usr.getAddr().equals(SystemComponents.getInstance().getCurrentIp()) && ThreadMode)
                     continue;
                 switch (msg.getMode()){
                     case UserInfos:
@@ -70,7 +70,6 @@ public class NetworkReceiver extends Thread {
                     case Answer_Infos:
                         Add_User(msg.getObject());
                     case Answer_Nickname:
-                        //Todo A gérer
                         break;
                     case Error:
                         System.out.println("Error Encountered");

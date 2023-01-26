@@ -1,6 +1,7 @@
 package org.network;
 
 import com.google.gson.Gson;
+import org.database.Message;
 import org.database.User;
 
 import java.io.IOException;
@@ -46,6 +47,9 @@ public class NetworkSender{
                 case Answer_Nickname:
                     Answer_Nickname(infos,addr,port);
                     break;
+                case Error:
+                    Answer_Error(infos,addr,port);
+                    break;
             }
         }catch (IOException e){
             System.out.println("Message error");
@@ -75,7 +79,16 @@ public class NetworkSender{
     }
     private void Answer_Nickname(User usr,String addr,int port) throws IOException {
         String user = gson.toJson(usr);
-        String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Answer_Infos, user));
+        String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Answer_Nickname, user));
+        DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(addr), port);
+        System.out.println("Envoi de réponse");
+        senderSock.send(outPacket);
+        System.out.println("Réponse Envoyée");
+        senderSock.close();
+    }
+    private void Answer_Error(User usr,String addr,int port) throws IOException {
+        String user = gson.toJson(usr);
+        String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Error, user));
         DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(addr), port);
         System.out.println("Envoi de réponse");
         senderSock.send(outPacket);
@@ -90,6 +103,7 @@ public class NetworkSender{
         System.out.println("Infos Envoyées");
         senderSock.close();
     }
+
     private void Disconnect(User usr) throws IOException {
         String msg =gson.toJson( new NetworkMessage(Types.UDPMode.Disconnect, gson.toJson(usr)));
         DatagramPacket outPacket = new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName(broad), destinationPort);

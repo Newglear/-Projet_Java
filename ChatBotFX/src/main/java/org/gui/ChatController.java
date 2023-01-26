@@ -347,7 +347,7 @@ public class ChatController {
         }
         switch(event){
             case NewUser:
-                //createUser(data,true); // TODO Remplacer par Display contacts pour avoir le même format (Connecté -> Déconnecté)?
+                //createUser(data,true);
                 displayContacts();
                 break;
             case RemUser:
@@ -360,7 +360,7 @@ public class ChatController {
             case NewMessage:
                 Message msg = new Gson().fromJson(data,Message.class);
                 if(SystemComponents.getInstance().db.LoadUser(Integer.parseInt(activeBorderPane.getId())).getPseudo().equals(msg.getSender()) && activeBorderPane != null)
-                    createMessage(msg.getMsg(),msg.isSent());
+                    //createMessage(msg.getMsg(),msg.isSent());
                 break;
             default:
                 break;
