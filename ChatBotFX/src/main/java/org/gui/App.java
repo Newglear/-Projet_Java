@@ -59,7 +59,7 @@ public class App extends Application {
         SystemComponents sys = SystemComponents.getInstance();
         int port = 1234;
         sys.setPort(port);
-        sys.setCurrentIp(SystemComponents.getIPv4().getHostName());
+        sys.setCurrentIp(SystemComponents.getIPv4().getHostAddress());
 
         launch();
     }

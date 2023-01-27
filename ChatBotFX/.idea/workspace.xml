@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix DatabaseManager">
-      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +84,26 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gui.App" />
       <module name="ChatBotFX" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.Main" />
+      <module name="ChatBotFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,22 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UDPBroadcastTest.Simple_Interaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChatBotFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chatsystem.network.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chatsystem.network" />
-      <option name="MAIN_CLASS_NAME" value="chatsystem.network.UDPBroadcastTest" />
-      <option name="METHOD_NAME" value="Simple_Interaction" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UDPBroadcastTest.Unicity_Check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChatBotFX" />
       <extension name="coverage">
@@ -157,19 +159,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.UDPBroadcastTest.Nickname_Update" />
-      <item itemvalue="JUnit.UDPBroadcastTest.Simple_Interaction" />
       <item itemvalue="JUnit.UDPBroadcastTest.Unicity_Check" />
       <item itemvalue="JUnit.UDPBroadcastTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="JUnit.UDPBroadcastTest.Nickname_Update" />
         <item itemvalue="JUnit.UDPBroadcastTest.Unicity_Check" />
-        <item itemvalue="JUnit.UDPBroadcastTest.Simple_Interaction" />
       </list>
     </recent_temporary>
   </component>
@@ -366,5 +368,16 @@
     <MESSAGE value="Maj udp" />
     <MESSAGE value="Fix DatabaseManager" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix DatabaseManager" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

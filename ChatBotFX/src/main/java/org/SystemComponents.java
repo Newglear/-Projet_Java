@@ -111,6 +111,7 @@ public class SystemComponents {
             for (InterfaceAddress i : networkInterface.getInterfaceAddresses()) {
                 InetAddress address = i.getAddress();
                 // Is not the localhost address
+                System.out.println(address);
                 if (address.equals(InetAddress.getByName("127.0.0.1"))) {
                     continue;
                 }
@@ -122,7 +123,7 @@ public class SystemComponents {
     public static InetAddress getIPv4() throws SocketException, UnknownHostException {
         ArrayList<InetAddress> addresses = getSelfAddresses();
         for(InetAddress addr : addresses){
-            if(addr.getHostName().matches("(\\d{1,3}\\.){3}\\d{1,3}")){
+            if(addr.getHostAddress().matches("(\\d{1,3}\\.){3}\\d{1,3}")){
                 return addr;
             }
         }
@@ -130,7 +131,7 @@ public class SystemComponents {
     }
 
     public static InetAddress toBroadcast(InetAddress address) throws UnknownHostException {
-        String addr = address.getHostName();
+        String addr = address.getHostAddress();
         String[] split = addr.split("\\.");
         split[0] += ".";
         split[1] += ".";

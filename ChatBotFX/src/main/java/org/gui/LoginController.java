@@ -108,6 +108,6 @@ public class LoginController {
     }
 
     public void updateIp() throws SocketException, UnknownHostException {
-        labelIp.setText(SystemComponents.getIPv4().getHostName());
+        labelIp.setText(SystemComponents.getIPv4().getHostAddress());
     }
 }

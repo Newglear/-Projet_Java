@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws SQLException, SocketException, UnknownHostException {
         SystemComponents sys = SystemComponents.getInstance();
         System.out.println("Addresse IP = "+SystemComponents.getIPv4().getHostName());
-        System.out.println("Addresse de Broadcast = "+SystemComponents.toBroadcast(SystemComponents.getIPv4()).getHostName());
+        System.out.println("Addresse de Broadcast = "+SystemComponents.toBroadcast(SystemComponents.getIPv4()).getHostAddress());
 
         NetworkSender s = new NetworkSender(new User("Gwen",1234,SystemComponents.getIPv4().getHostName()),"192.168.1.198",1234 ,Types.UDPMode.Error);
     }

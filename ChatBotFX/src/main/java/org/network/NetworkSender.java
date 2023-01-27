@@ -16,7 +16,7 @@ public class NetworkSender{
 
     public NetworkSender(User infos, Types.UDPMode mode,int port) throws SocketException, UnknownHostException {
         senderSock = new DatagramSocket();
-        broad = SystemComponents.toBroadcast(SystemComponents.getIPv4()).getHostName();
+        broad = SystemComponents.toBroadcast(SystemComponents.getIPv4()).getHostAddress();
         this.destinationPort = port;
         senderSock.setBroadcast(true);
         System.out.println("===== Phase d'envoi =====");
