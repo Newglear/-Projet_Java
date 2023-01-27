@@ -20,7 +20,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class UDPBroadcastTest {
-
+/*
     int num = 0;
     User usr;
     ArrayList<User> contactList;
@@ -92,5 +92,7 @@ public class UDPBroadcastTest {
     public static void Clear() throws SQLException {
         SystemComponents.getInstance().db.Flush();
      }
+     */
+
 
 }

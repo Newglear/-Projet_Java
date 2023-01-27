@@ -12,6 +12,7 @@ org/network/NetworkSender$1.class
 org/conv/ConnectionManager.class
 module-info.class
 org/SystemComponents.class
+org/Flush.class
 org/conv/SenderThread.class
 org/network/NetworkReceiver.class
 org/network/NetworkSender.class
@@ -21,5 +22,6 @@ org/network/NetworkReceiver$1.class
 org/network/Types.class
 org/gui/ChatController.class
 org/conv/ReceiverThread.class
+org/Launch.class
 org/gui/ChatController$1.class
 org/test.class
