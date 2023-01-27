@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix getHostAddress" />
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix getHostAddress">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

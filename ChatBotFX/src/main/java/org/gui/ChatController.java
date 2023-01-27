@@ -274,9 +274,9 @@ public class ChatController {
 
                 th.Send(new Message(SystemComponents.getInstance().db.LoadUser(Uid).getPseudo(),true,inputText));
 
-            }
-            createMessage(inputText, true);
-                messageInput.clear();
+                createMessage(inputText, true);
+                    messageInput.clear();
+                }
             }
         }
 
