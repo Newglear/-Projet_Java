@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="bugFix message vide">
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="fix Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" afterDir="false" />
     </list>
@@ -180,7 +180,8 @@
       <workItem from="1674735288337" duration="19453000" />
       <workItem from="1674759537573" duration="2279000" />
       <workItem from="1674767539434" duration="3556000" />
-      <workItem from="1674859449488" duration="25000" />
+      <workItem from="1674859449488" duration="132000" />
+      <workItem from="1674859650197" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -350,7 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674858769357</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix Tests">
+      <created>1674859518327</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1674859518327</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix Tests">
+      <created>1674859559073</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1674859559074</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +400,8 @@
     <MESSAGE value="Fix DatabaseManager" />
     <MESSAGE value="Fix getHostAddress" />
     <MESSAGE value="bugFix message vide" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugFix message vide" />
+    <MESSAGE value="fix Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
