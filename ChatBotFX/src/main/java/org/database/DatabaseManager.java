@@ -18,7 +18,7 @@ public class DatabaseManager  {
 
     private ArrayList<ChatController> observers;
 
-    public DatabaseManager(){
+    public DatabaseManager() throws SQLException {
         observers = new ArrayList<>();
         try {
             con = DriverManager.getConnection("jdbc:sqlite:ChaDBsqlite");
@@ -27,6 +27,7 @@ public class DatabaseManager  {
             System.out.println(s);
         }
         System.out.println("Database Initialised");
+        Initialisation();
     }
 
     public void subscribe (ChatController c){
@@ -74,7 +75,7 @@ public class DatabaseManager  {
                     "primary key autoincrement," +
                     "Nickname VARCHAR              not null, " +
                     "Ip       VARCHAR(120)         not null, " +
-                    "Port     integer default 1234 not null" +
+                    "Port     integer default 1234 not null," +
                     "State    Bool" +
                 ")";
         p = con.prepareStatement(query);
