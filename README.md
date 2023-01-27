@@ -3,8 +3,8 @@ Evan ROZIERE, Gwenael ROBERT, 4IR-A1 2022-2023
 
 ## Présentation du projet
 
-Ce dépot contient le résultat de nos travaux dans le cadre de l'UF Conception et Programmation avancée. 
-Il s'agit d'une application de chat non centralisée réalisée en Java. 
+Ce dépot contient le résultat de nos travaux dans le cadre de l'UF Conception et Programmation avancées. 
+Il s'agit d'une application de chat décentralisée réalisée en Java. 
 Elle supporte les fonctions suivantes: 
 - **phase d'établissement du réseau local** par broadcast UDP 
 - Configuration de l'utilisateur
