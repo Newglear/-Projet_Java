@@ -38,6 +38,9 @@ mvn test
 # démarrer l'application 
 mvn javafx:run
 ```
+
+### NB 
+Un exectable .JAR est présent mais ne fonctionne pas en réseau. Il est néanmoins possible de visualiser l'application. 
 ### Crédits 
 Logo de l'application :
 <img src="ChatBotFX/src/main/resources/org/gui/images/loginChad.png">
