@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix getHostAddress">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/ChatController.java" afterDir="false" />
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="bugFix message vide">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chatsystem/network/UDPBroadcastTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.UDPBroadcastTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gui.App" />
       <module name="ChatBotFX" />
@@ -160,9 +161,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="JUnit.UDPBroadcastTest.Nickname_Update" />
         <item itemvalue="JUnit.UDPBroadcastTest.Unicity_Check" />
       </list>
@@ -179,6 +180,7 @@
       <workItem from="1674735288337" duration="19453000" />
       <workItem from="1674759537573" duration="2279000" />
       <workItem from="1674767539434" duration="3556000" />
+      <workItem from="1674859449488" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de la gestion des adresses, Modification de Insert(User)">
       <created>1674736582015</created>
@@ -341,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674857387614</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="bugFix message vide">
+      <created>1674858769357</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674858769357</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +384,8 @@
     <MESSAGE value="Maj udp" />
     <MESSAGE value="Fix DatabaseManager" />
     <MESSAGE value="Fix getHostAddress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix getHostAddress" />
+    <MESSAGE value="bugFix message vide" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugFix message vide" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
