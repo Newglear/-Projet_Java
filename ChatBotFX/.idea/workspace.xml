@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix DatabaseManager">
+    <list default="true" id="497e54e9-c024-41b8-aff6-682500764eaa" name="Changes" comment="Fix getHostAddress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/SystemComponents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/conv/SenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/network/NetworkSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/SystemComponents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/conv/SenderThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/gui/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/network/NetworkSender.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gui.App" />
       <module name="ChatBotFX" />
@@ -167,8 +166,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.UDPBroadcastTest" />
         <item itemvalue="JUnit.UDPBroadcastTest.Nickname_Update" />
         <item itemvalue="JUnit.UDPBroadcastTest.Unicity_Check" />
@@ -334,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674852373044</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fix getHostAddress">
+      <created>1674857067815</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674857067815</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +373,8 @@
     <MESSAGE value="Maj window" />
     <MESSAGE value="Maj udp" />
     <MESSAGE value="Fix DatabaseManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix DatabaseManager" />
+    <MESSAGE value="Fix getHostAddress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix getHostAddress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
