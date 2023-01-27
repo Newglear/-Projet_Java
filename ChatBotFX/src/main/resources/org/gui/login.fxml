@@ -57,7 +57,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Label layoutX="41.0" layoutY="261.0" text="0.0.0.0" textFill="#434343">
+            <Label fx:id="ipLabel" layoutX="41.0" layoutY="261.0" text="0.0.0.0" textFill="#434343">
                <font>
                   <Font name="Comfortaa Regular" size="13.0" />
                </font>

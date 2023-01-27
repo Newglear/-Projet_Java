@@ -44,6 +44,9 @@ public class LoginController {
     @FXML
     private TextField username_in;
 
+    @FXML
+    private Label ipLabel;
+
 
     @FXML
     private void userLogin(ActionEvent e) throws IOException, InterruptedException, SQLException {
@@ -81,6 +84,10 @@ public class LoginController {
         //ChatController cc = (ChatController) (new FXMLLoader(getClass().getResource("chat.fxml"))).getController();
         cc.updateUsername(nickname);
         cc.displayContacts();
+    }
+
+    public void updateIp(){
+        ipLabel.setText("123.40.43.4");
     }
 
 }

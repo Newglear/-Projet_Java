@@ -29,10 +29,13 @@ public class App extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setResizable(false);
+        //stage.setResizable(false);
         stage.setTitle("Login");
         stage.show();
         //TODO: add IP address to label
+
+        LoginController lc = loader.getController();
+        lc.updateIp();
     }
 
     @Override
@@ -50,16 +53,16 @@ public class App extends Application {
         SystemComponents.setPort(port);
         SystemComponents.setCurrentIp(addr.getHostName());
 
-        List<String> nicknames = Arrays.asList("Gwen","Cador","Evan","Joel","Kiki");
+        List<String> nicknames = Arrays.asList("Paul","Jean","Evan","Joel","Kiki");
         for(String n:nicknames){
             DatabaseManager.Insert(new User(n,(int)(Math.random()*(2000-1234+1)+1234),"192.168.25."));
             System.out.println(n);
         }
         ArrayList<Message> messageList = new ArrayList<>();
-        messageList.add(new Message(nicknames.get(0),true,"Message de test de Gwen"));
-        messageList.add(new Message(nicknames.get(1),true,"szerguihrigbs"));
-        messageList.add(new Message(nicknames.get(0),true,"vszjbhuzsbvkjhdfgbsrg"));
-        messageList.add(new Message(nicknames.get(1),false,"dgfbjhbnsduibsdfuihjsbrgf"));
+        messageList.add(new Message(nicknames.get(0),true,"Bonjour comment tu vas ?"));
+        messageList.add(new Message(nicknames.get(0),false,"Salut Pierre ça va très bien merci."));
+        messageList.add(new Message(nicknames.get(0),false,"J'ai besoin que tu viennes m'aider pour le projet sur l'aile d'avion, j'ai un gros problème urgent !"));
+        messageList.add(new Message(nicknames.get(0),true,"Heureusement pour toi grâce à notre nouvelle application de chat décentralisé Chador, je peux savoir en temps et en heure ce qui se passe ! J'arrive de suite Paul."));
         for(Message m: messageList){
             DatabaseManager.Insert(m);
         }
